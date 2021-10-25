@@ -360,14 +360,73 @@
 // console.log(resFloat)
 
 // Float
-var d = 123.45
+// var d = 123.45
 
 // To Strings
 // "123.45"
-var resStr = d.toString()
-console.log(resStr);
+// var resStr = d.toString()
+// console.log(resStr);
 
 // To Integer
 // 123
-var resInt = parseInt(d)
-console.log(resInt);
+// var resInt = parseInt(d)
+// console.log(resInt);
+
+// String properties and methods
+// index dimuali dari 0
+var x = "Hello World!"
+
+// H index - 0
+// e index - 1
+// l index - 2
+// l index - 3
+// o index - 4
+// space index - 5
+// W index - 6
+// o index - 7
+// r index - 8
+// l index - 9
+// d index - 10
+// ! index - 11
+
+// Banyak karakter pada string
+// console.log(x.length)
+
+// Mencari index dari string World di dalam string x
+// console.log(x.indexOf('World!'))
+
+// Men-copy bagian tertentu dari string
+// index awal, jumlah karakter yang ingin di copy
+// console.log(x.substr(2, 5)) // llo W
+
+// Men-copy bagian tertentu dari string
+// index awal, index akhir (tidak termasuk)
+// console.log(x.slice(0, 5)); // Hello
+// console.log(x.slice(6, 11)); // World
+
+
+// Memecah string menjadi beberapa bagian, berpatokan dengan karakter tertentu
+// console.log(x.split(''));
+
+// var y = "hello"
+// var z = "WORLD"
+
+// Mengubah string menjadi huruf kapital
+// console.log(y.toUpperCase())
+
+// Mengubah string menjadi huruf kecil
+// console.log(z.toLowerCase());
+
+// Mengubah suatu huruf l dengan n
+// console.log(y.replace('l', 'n'))
+// Mengubah semua huruf l dengan n
+// console.log(y.replace(/l/g, 'n'))
+
+// handphone, shoes, pen, glass
+// search : o
+// [handphone, shoes]
+var text = "Hello World"
+
+console.log(text.includes("World"));
+console.log(text.includes("orld"));
+console.log(text.includes("world"));
