@@ -355,6 +355,22 @@ andi += 2;
 // budi = total umur * (rasio budi / total rasio)
 var budi = totalAge * (ratioBudi / ratioTotal) + 2;
 
-console.log("Andi :", andi);
-console.log("Budi :", budi);
-console.log(andi + budi);
+// console.log("Andi :", andi);
+// console.log("Budi :", budi);
+// console.log(andi + budi);
+
+// Student answer
+var totalHari = 485;
+var tahun = 360;
+var bulan = 30;
+var minggu = 7;
+
+var totalYears = Math.floor(totalHari / tahun);
+var totalMonths = Math.floor((totalHari % tahun) / bulan);
+var totalWeeks = Math.floor(((totalHari % tahun) % bulan) / minggu);
+var totalDays = Math.floor(((totalHari % tahun) % bulan) % minggu);
+
+console.log("years total:", tahun1);
+console.log("months total:", bulan1);
+console.log("weeks total:", minggu1);
+console.log("days total:", hari1);
