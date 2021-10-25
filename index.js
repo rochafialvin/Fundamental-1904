@@ -4,21 +4,21 @@
 
 // Tipe data
 // String (text)
-// console.log("Ini adalah string");
+console.log("Ini adalah string");
 
 // Number
-// console.log(235);
-// console.log(-234);
-// console.log(23.5);
+console.log(235);
+console.log(-234);
+console.log(23.5);
 
 // Boolean
-// console.log(true);
-// console.log(false);
+console.log(true);
+console.log(false);
 
 // Array / [ ]
 // Dapat menyimpan banyak data dengan berbagai macam tipe data
-// console.log(["senin", "selasa", "rabu"]);
-// console.log(["senin", 1904, -1904, true]);
+console.log(["senin", "selasa", "rabu"]);
+console.log(["senin", 1904, -1904, true]);
 
 // Object / { }
 // key value pair
