@@ -300,3 +300,74 @@
 // Max, mencari nilai maximum
 // var result = Math.max(1, 3, 5);
 // console.log(result);
+
+// Strings
+// console.log("Wait i'll be there in a second")
+// console.log('Wait i\'ll be there in a second')
+
+// console.log('hello, i am "fine"')
+// console.log("hello, i am \"fine\"")
+
+// new line
+// console.log("Hello\n Guys\n  hehe")
+
+// tab
+// console.log("Hello\tGuys")
+
+// var firstName = "Max"
+// var lastName = "Verstappen"
+
+// var fullName = firstName + " " + lastName
+
+// var intro = "My full name is " + firstName + " " + lastName 
+// console.log(intro)
+
+// var introBacktick = `My full name is ${firstName} ${lastName}`
+// console.log(introBacktick)
+
+// console.log(`What a beautiful!`)
+
+
+// Parse value
+
+// Strings
+// var a = "123"
+// var b = "123.45"
+
+// To Integer (bilangan bulat)
+// var resultInteger = parseInt(a)
+// console.log(resultInteger) // 123
+
+// resultInteger = parseInt(b)
+// console.log(resultInteger) // 123
+
+// To Float (decimal)
+// var resFloat = parseFloat(a)
+// console.log(resFloat) // 123
+
+// resFloat = parseFloat(b)
+// console.log(resFloat) // 123.45
+
+// Integer
+// var c = 123
+
+// To String
+// var resStr = c.toString()
+// console.log(resStr)
+
+// To Float
+// var resFloat = parseFloat(c)
+// console.log(resFloat)
+
+// Float
+var d = 123.45
+
+// To Strings
+// "123.45"
+var resStr = d.toString()
+console.log(resStr);
+
+// To Integer
+// 123
+var resInt = parseInt(d)
+console.log(resInt);
