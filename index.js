@@ -300,3 +300,24 @@
 // Max, mencari nilai maximum
 // var result = Math.max(1, 3, 5);
 // console.log(result);
+
+/*
+  Clue : Gunakan modulus / mode
+  
+  Kita memiliki 485 hari.
+  Coba nyatakan dalam tahun, bulan, minggu, hari
+
+  100 hari = 0 tahun, 3 bulan, 1 minggu, 3 hari
+
+  1 tahun  = 360 hari
+  1 bulan = 30 hari
+  1 minggu = 7 hari
+
+*/
+
+/*
+  Saat ini jumlah usia Andi & Budi = 49 tahun
+  Rasio umur Andi & Budi = 0.4
+  Berapa usia Andi & Budi 2 tahun lagi ?
+
+*/
