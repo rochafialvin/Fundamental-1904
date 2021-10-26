@@ -41,13 +41,13 @@
 // alert(result)
 // console.log(result)
 
-var day = "Selasa"
-var date = 26
+// var day = "Selasa"
+// var date = 26
 
 // kutip 1
 // kutip 2
-var information = "Hari ini " + day + ", tanggal " + date
-console.log(information);
+// var information = "Hari ini " + day + ", tanggal " + date
+// console.log(information);
 // backtick
-information = `Hari ini ${day}, tanggal ${date}`
-console.log(information);
+// information = `Hari ini ${day}, tanggal ${date}`
+console.log(`${1000 * 2}`);
