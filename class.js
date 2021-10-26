@@ -32,11 +32,22 @@
 
 // Biodata
 // nama, hobby, address
-var fullName = prompt("Nama lengkap")
-var hobby = prompt("Hobi")
-var address = prompt("Alamat")
+// var fullName = prompt("Nama lengkap")
+// var hobby = prompt("Hobi")
+// var address = prompt("Alamat")
 
-var result = `Nama lengkap saya ${fullName}\nHobi saya adalah ${hobby}\nAlamat rumah saya ${address}`
+// var result = `Nama lengkap saya ${fullName}\nHobi saya adalah ${hobby}\nAlamat rumah saya ${address}`
 
-alert(result)
-console.log(result)
+// alert(result)
+// console.log(result)
+
+var day = "Selasa"
+var date = 26
+
+// kutip 1
+// kutip 2
+var information = "Hari ini " + day + ", tanggal " + date
+console.log(information);
+// backtick
+information = `Hari ini ${day}, tanggal ${date}`
+console.log(information);
