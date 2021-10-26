@@ -58,11 +58,40 @@
 // Pulpen : false | Pensil : true | Ujian : true
 // Pulpen : false | Pensil : false | Ujian : false
 
-console.log(true || true) // true
-console.log(true || false) // true
-console.log(false || false) // false
+// console.log(true || true) // true
+// console.log(true || false) // true
+// console.log(false || false) // false
+
+// Menghasilkan number
+// console.log(true | true) // 1
+// console.log(true | false) // 1
 
 // true || true = true
-console.log((6 < 9) || (7 > 6)) // true
+// console.log((6 < 9) || (7 > 6)) // true
 // false || true
-console.log((3 >= 4) || (5 == "5")) // true
+// console.log((3 >= 4) || (5 == "5")) // true
+
+
+// AND
+// "Jika keduanya bernilai true, maka hasilnya true. Kondisi lainnya akan menghasilkasn false"
+// "true AND true = true, sisanya false"
+
+// Boleh mengikuti ujian jika membawa pensil DAN pulpen
+// Pulpen : true | Pensil : true | Ujian : true
+// Pulpen : true | Pensil : false | Ujian : false
+// Pulpen : false | Pensil : true | Ujian : false
+// Pulpen : false | Pensil : false | Ujian : false
+
+// console.log(true && true) // true
+// console.log(true && false) // false
+// console.log(false && false) // false
+
+// Akan menghasilkan number
+// console.log(true & true) // 1
+// console.log(true & false) // 0
+
+// false && true = false
+console.log((3 >= 4) && (5 == "5")) // false
+// true && true = true
+console.log((6 < 9) && (7 > 6)) // true 
+
