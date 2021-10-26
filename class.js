@@ -101,8 +101,25 @@
 // console.log(!true) // false
 // console.log(!false) // true
 
-var show = false
+// var show = false
 
 // menekan tombol "hubungi kami"
 // menekan tombol x
-show = !show
+// show = !show
+
+
+// IF STATEMENT
+
+// Jika condition bernilai true, task akan dijalankan
+// Jika condition bernilai false, task tidak dijalankan
+// if(condition){
+  // task
+// }
+
+
+// Jika kondisi hujan -> kenakan jas hujan
+var rain = false
+
+if(rain){
+  console.log("Kenakan jas hujan")
+}
