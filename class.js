@@ -91,7 +91,18 @@
 // console.log(true & false) // 0
 
 // false && true = false
-console.log((3 >= 4) && (5 == "5")) // false
+// console.log((3 >= 4) && (5 == "5")) // false
 // true && true = true
-console.log((6 < 9) && (7 > 6)) // true 
+// console.log((6 < 9) && (7 > 6)) // true 
 
+// NOT
+// Membalikkan nilai yang ada didepannya
+
+// console.log(!true) // false
+// console.log(!false) // true
+
+var show = false
+
+// menekan tombol "hubungi kami"
+// menekan tombol x
+show = !show
