@@ -113,13 +113,27 @@
 // Jika condition bernilai true, task akan dijalankan
 // Jika condition bernilai false, task tidak dijalankan
 // if(condition){
-  // task
+  //task
 // }
 
 
 // Jika kondisi hujan -> kenakan jas hujan
-var rain = false
+// var rain = false
 
-if(rain){
-  console.log("Kenakan jas hujan")
+// if(rain){
+//   console.log("Kenakan jas hujan")
+// }
+
+// Jika tidak bersalah -> dibebaskan
+// var guilty = false
+
+// if(!guilty){
+//   console.log("Anda di bebaskan")
+// }
+
+// Jika umur sudah mencapai 18 atau lebih : dapat membuat SIM
+var age = 21
+// true && false = false
+if(age >= 18 && age <=20){
+  console.log("Permohonan diterima, silahkan lanjutkan ke proses berikutnya");
 }
