@@ -16,18 +16,27 @@
 
 // SHIFT + ALT + DOWN ARROW // copy
 // ALT + ARROW // move
+// ALT + Z // wrap
 
 // Input string
-var input = prompt("Ketik sesuatu hal disini")
-console.log(`Input: ${input}`)
+// var input = prompt("Ketik sesuatu hal disini")
+// console.log(`Input: ${input}`)
 
 // Input Number
-input = prompt("Tuliskan angka")
-console.log(`Input: ${input}`)
-console.log(`Tipe data: ${typeof input}`)
-alert(`Input: ${input}`)
-alert(`Tipe data: ${typeof input}`)
+// input = prompt("Tuliskan angka")
+// console.log(`Input: ${input}`)
+// console.log(`Tipe data: ${typeof input}`)
+// alert(`Input: ${input}`)
+// alert(`Tipe data: ${typeof input}`)
 
 
 // Biodata
 // nama, hobby, address
+var fullName = prompt("Nama lengkap")
+var hobby = prompt("Hobi")
+var address = prompt("Alamat")
+
+var result = `Nama lengkap saya ${fullName}\nHobi saya adalah ${hobby}\nAlamat rumah saya ${address}`
+
+alert(result)
+console.log(result)
