@@ -1,23 +1,18 @@
-# MARKET V.1.1
+## MARKET V.1.2
 
-**Market adalah aplikasi penjualan buah.**
+### Specifications :
 
-- Kita memiliki tiga buah :
-  - Apel
-  - Anggur
-  - Jeruk
+- Dari versi sebelumnya, tambahkan variable stock untuk setiap produk.
 
-- Saat running pertama kali akan meminta input user berupa jumlah qty yang ingin dibeli untuk masing - masing buah.
+- Jika user menginput jumlah quantity melebihi stock.
+    - Qty buah tersebut akan menjadi sejumlah stock yang ada.
+    - Format alert : "Permintaan melebihi stock, qty akan terisi sesuai jumlah stock yaitu (stock)"
 
-- Setiap buah memiliki harga satuan
-  - Apel    : 10.000
-  - Anggur  : 15.000
-  - Jeruk   : 20.000
+- Lanjut Menampilkan total biaya yang harus dibayar, sekaligus meminta user untuk menginput sejumlah uang untuk membayar. 
 
-- Setelah menerima qty untuk setiap buah, hitung harga total untuk masing - masing buah, dan harga total untuk buah keseluruhan.
+- Saat user sudah memasukkan sejumlah uang. akan terdapat 2 kondisi berbeda, dan setiap kondisi akan memiliki alurnya masing - masing untuk dijalankan
 
-- Munculkan detail belanja menggunakan alert
-
-- Isi Detail belanja
-  - qty, harga satuan , dan total harga setiap buah
-  - Total harga secara keseluruhan
+    - Kondisi 1 : Jika user menginput dengan jumlah kurang dari seharusnya
+        - Munculkan alert ' Transaksi dibatalkan, Yang anda masukkan kurang (nominal kurang) '
+    - Kondisi 2 : Jika user menginput dengan jumlah sama atau lebih dari seharusnya
+        - Munculkan alert ' Terimakasih, Uang kembalian untuk Anda (nominal kembali)'
