@@ -50,4 +50,4 @@
 // console.log(information);
 // backtick
 // information = `Hari ini ${day}, tanggal ${date}`
-console.log(`${1000 * 2}`);
+// console.log(`${1000 * 2}`);

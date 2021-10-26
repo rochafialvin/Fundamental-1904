@@ -46,7 +46,7 @@
 
 ////////////////////////////////////////////////////////
 
-var x = 4, y = 3, z = 2
-var calculation = (x + y * z) / (x * y)
-var w = Math.pow(calculation, z)
-console.log(w)
+// var x = 4, y = 3, z = 2
+// var calculation = (x + y * z) / (x * y)
+// var w = Math.pow(calculation, z)
+// console.log(w)
