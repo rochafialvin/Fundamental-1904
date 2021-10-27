@@ -67,7 +67,10 @@ var margin = Math.abs(money - finalPrice);
 if (money < finalPrice) {
   // Jika uangnya kurang, transaksi dibatalkan
   alert(`Transaksi dibatalkan, Uang yang anda masukkan kurang ${margin}`);
-} else {
-  // Jika uangnya sama atau lebih
+} else if (money > finalPrice) {
+  // Jika uangnya lebih
   alert(`Terimakasih, Uang kembali untuk Anda ${margin}`);
+} else {
+  // Jika uangnya sama
+  alert("Terimakasih");
 }

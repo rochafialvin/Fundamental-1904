@@ -53,3 +53,35 @@
 // true lebih besar dari false
 // console.log(true > false);
 // console.log(false > true);
+
+//
+// var firstNumber = parseInt(prompt("Masukkan angka pertama"));
+// var secondNumber = parseInt(prompt("Masukkan angka kedua"));
+
+// if (firstNumber > secondNumber) {
+//   alert(`${firstNumber} adalah yang terbesar`);
+// } else if (firstNumber < secondNumber) {
+//   alert(`${secondNumber} adalah yang terbesar`);
+// } else {
+//   alert("Kedua angka besarnya sama");
+// }
+
+// Besaran belanja lebih besar 1000 --> discount 15%
+// Besaran belanja lebih kecil atau sama dengan 1000 --> discount 5%
+
+var amount = parseInt(prompt("Masukan besaran total belanja"));
+var discount;
+
+if (amount > 1000) {
+  discount = 15;
+} else {
+  discount = 5;
+}
+
+var totalDiscount = amount * (discount / 100);
+var finalAmount = amount - totalDiscount;
+
+alert(`
+Besaran belanja    ${amount}
+Besaran discount ${discount}%   ${totalDiscount}
+Besaran yang dibayar    ${finalAmount}`);
