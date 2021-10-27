@@ -212,24 +212,113 @@
 // Points : 59 - 0 : D
 // Points : undefined : F
 
-var points = 90;
-var grade;
+// var points = 90;
+// var grade;
 
 // Points : 100 - 85 : A
-if (points >= 85 && points <= 100) {
-  grade = "A";
-  // Points : 84 - 75 : B
-} else if (points >= 75 && points <= 84) {
-  grade = "B";
-  // Points : 74 - 60 : C
-} else if (points >= 60 && points <= 74) {
-  grade = "C";
-  // Points : 59 - 0 : D
-} else if (points >= 0 && points <= 59) {
-  grade = "D";
-  // Points : undefined : F
-} else {
-  grade = "F";
-}
+// if (points >= 85 && points <= 100) {
+// grade = "A";
+// Points : 84 - 75 : B
+// } else if (points >= 75 && points <= 84) {
+// grade = "B";
+// Points : 74 - 60 : C
+// } else if (points >= 60 && points <= 74) {
+// grade = "C";
+// Points : 59 - 0 : D
+// } else if (points >= 0 && points <= 59) {
+// grade = "D";
+// Points : undefined : F
+// } else {
+// grade = "F";
+// }
 
-console.log(points, grade);
+// SWITCH CASE
+
+// 1. Dapat memiliki condition lebih dari satu
+// 2. Terdapat block kode yang akan dijalankaan saat semua condition bernilai false (else)
+
+// switch (key) {
+// case value_1:
+// Jika nilai "key" sama dengan "value_1"
+// task 1
+// break;
+
+// case value_2:
+// Jika nilai "key" == "value_1"
+// task 2
+// break;
+
+// default:
+// task default
+// break;
+// }
+
+// var tech = "Javascript";
+
+// switch (tech) {
+// case "Javascript":
+// Jika nilai "tech" sama dengan "Javascript"
+// console.log("Javascript berfungsi untuk mengolah data");
+// Keyword break digunakan untuk menghalangi menjalankan kode pada case lainnya
+// break;
+// case "HTML":
+// Jika nilai "tech" sama dengan "HTML"
+// console.log("HTML berfungsi untuk membuat kerangka website");
+// break;
+
+// default:
+// console.log(`Informasi mengenai ${tech} tidak ditemukan`);
+// }
+
+// var number = 10;
+
+// switch (false) {
+// case number % 2 == 1:
+// console.log(`${number} merupakan bilangan genap`);
+// break;
+
+// default:
+// console.log(`${number} merupakan bilangan ganjil`);
+// }
+
+// TRUTHY & FALSY
+
+// false : 0 , "", undefined, null, NaN
+
+// Number
+// 0 --> false
+// -23 , 234, 23.5 --> true
+// console.log("0", Boolean(0));
+// console.log("-23", Boolean(23));
+// console.log("234", Boolean(234));
+// console.log("-23.5", Boolean(-23.5));
+// console.log("23.5", Boolean(23.5));
+
+// String
+// "" --> false
+// "abcd", " " --> true
+// console.log("", Boolean(""));
+// console.log(" ", Boolean(" "));
+// console.log("abc", Boolean("abc"));
+
+// Array & Object
+// Always true
+// console.log("[]", Boolean([]));
+// console.log("[0]", Boolean([0]));
+// console.log("{}", Boolean({}));
+// console.log("{day: 1}", Boolean({ day: 1 }));
+
+// undefiend, null, NaN
+// Always false
+console.log("undefiend", Boolean(undefined));
+console.log("null", Boolean(null));
+console.log("NaN", Boolean(NaN));
+
+// undefined
+// var day;
+// null
+// var date = null;
+// NaN : Not a Number
+// var text = "abcd";
+// var tertentu = NaN;
+// console.log(parseInt(text));
