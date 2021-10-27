@@ -1,324 +1,80 @@
-// Conditional Statement
-// Boolean : true or false
+// LOOP STATEMENTS
+// Statement yang memungkinkan kita untuk mengulang suatu proses / task
 
-// Operator perbandingan
-// Menghasilkan nilai boolean
+// WHILE Loop
 
-// var result = 5 < 4
-// console.log(result)
+/*
+    Aturan Utama
+    Berlaku untuk segala jenis loop : while, do while, for
 
-// console.log(5 > 4) // true
-// console.log(5 < 4) // false
+    "Selama 'condition' bernilai 'true', maka 'task' yang ada pada loop akan diproses"
+*/
 
-// compare : value
-// console.log( 7 == 9) // false
-// console.log( 7 == 7) // true
-// console.log( 7 == "7") // true
+/*
+    Alur Proses
 
-// compare : value and data type
-// console.log( 7 === 9) // false
-// console.log( 7 === 7) // true
-// console.log( 7 === "7") // false
+    Alur A: While dan For
 
-// compare: value
-// console.log( 18 != 17 ) // true
-// console.log( 24 != 24 ) // false
-// console.log( 24 != "24" ) // false
+    Alur B: Do While
 
-// compare: value and data type
-// console.log( 18 !== 17 ) // true
-// console.log( 24 !== 24 ) // false
-// console.log( 24 !== "24" ) // true
+*/
 
-// Boleh mengikuti ujian jika membawa pensil ATAU pulpen
-// Pulpen : true | Pensil : false | Ujian : true
-// Pulpen : false | Pensil : true | Ujian : true
-// Pulpen : false | Pensil : false | Ujian : false
+/*
+    Syntax
 
-// 7 > 8 ? false
-// 7 == 8 ? false
-// false
-// console.log( 7 >= 8) // false
+    while (condition) {
 
-// 7 < 8 ? true
-// 7 == 8 ? false
-// true
-// console.log( 7 <= 8) // true
+        task
 
-// Operator logika (AND, OR, NOT)
+        modification
 
-// OR
+    }
+*/
 
-// "Jika keduanya bernilai false, maka hasilnya false. Kondisi lainnya akan menghasilkasn true"
-// "false OR false = false, sisanya true"
+///////////////////////////
+// Menampilkan angka 1 - 5
+///////////////////////////
 
-// Boleh mengikuti ujian jika membawa pensil ATAU pulpen
-// Pulpen : true | Pensil : false | Ujian : true
-// Pulpen : false | Pensil : true | Ujian : true
-// Pulpen : false | Pensil : false | Ujian : false
+/*
+    Alur Proses While Loop
 
-// console.log(true || true) // true
-// console.log(true || false) // true
-// console.log(false || false) // false
+    1. Membuat variabel dengan nilai awal, digunakan sebagai acuan loop (init)
+    2. Mengevaluasi condition (condition)
+        a. condition : true, lanjut ke langkah 3
+        b. condition : false, keluar dari block loop
+    3. Menyelesaikan task
+    4. Menjalankan modification
+    5. Kembali ke langkah 2
 
-// Menghasilkan number
-// console.log(true | true) // 1
-// console.log(true | false) // 1
+*/
 
-// true || true = true
-// console.log((6 < 9) || (7 > 6)) // true
-// false || true
-// console.log((3 >= 4) || (5 == "5")) // true
+// number = 6
+// init
+// var number = 1;
 
-// AND
-// "Jika keduanya bernilai true, maka hasilnya true. Kondisi lainnya akan menghasilkasn false"
-// "true AND true = true, sisanya false"
+// condition
+// while (number <= 5) {
+// task
+// console.log(`Number: ${number}`);
 
-// Boleh mengikuti ujian jika membawa pensil DAN pulpen
-// Pulpen : true | Pensil : true | Ujian : true
-// Pulpen : true | Pensil : false | Ujian : false
-// Pulpen : false | Pensil : true | Ujian : false
-// Pulpen : false | Pensil : false | Ujian : false
-
-// console.log(true && true) // true
-// console.log(true && false) // false
-// console.log(false && false) // false
-
-// Akan menghasilkan number
-// console.log(true & true) // 1
-// console.log(true & false) // 0
-
-// false && true = false
-// console.log((3 >= 4) && (5 == "5")) // false
-// true && true = true
-// console.log((6 < 9) && (7 > 6)) // true
-
-// NOT
-// Membalikkan nilai yang ada didepannya
-
-// console.log(!true) // false
-// console.log(!false) // true
-
-// var show = false
-
-// menekan tombol "hubungi kami"
-// menekan tombol x
-// show = !show
-
-// IF STATEMENT
-
-// Jika condition bernilai true, task akan dijalankan
-// Jika condition bernilai false, task tidak dijalankan
-// if(condition){
-//task
+// modification
+// number++;
 // }
 
-// Jika kondisi hujan -> kenakan jas hujan
-// var rain = false
+// console.log(number);
+// console.log("Selesai");
 
-// if(rain){
-//   console.log("Kenakan jas hujan")
-// }
+///////////////
+// Dua Langkah
+///////////////
 
-// Jika tidak bersalah -> dibebaskan
-// var guilty = false
+// number = 7
+var number = 1;
 
-// if(!guilty){
-//   console.log("Anda di bebaskan")
-// }
+while (number <= 6) {
+  console.log(`Number: ${number}`);
 
-// Jika umur sudah mencapai 18 atau lebih : dapat membuat SIM
-// var age = 21
-// true && false = false
-// if(age >= 18 && age <=20){
-//   console.log("Permohonan diterima, silahkan lanjutkan ke proses berikutnya");
-// }
+  number += 2;
+}
 
-// IF ELSE STATEMENT
-
-// Jika condition bernilai true, maka task 1 akan dijalankan
-// Jika condition bernilai false, maka task 2 akan dijalankan
-
-// if(condition){
-// task 1
-// } else {
-// task 2
-// }
-
-// Jika kondisi hujan : kenakan payung
-// Jika kondisi tidak hujan : kenakan jaket
-
-// var rain = false
-
-// if(rain){
-// Jika rain : true
-// console.log(`Rain : ${rain}`);
-// console.log("Kenakan payung");
-// } else {
-// Jika rain : false
-// console.log(`Rain : ${rain}`);
-// console.log("Kenakan jaket");
-// }
-
-// Jika tidak bersalah : dibebaskan
-// Jika bersalah : dihukum
-// var guilty = true
-// if(!guilty){
-// Jika guilty : false
-// console.log(`Guilty ${guilty}`);
-// console.log("Anda dibebaskan");
-// } else {
-// Jika guilty : true
-// console.log(`Guilty ${guilty}`);
-// console.log("Anda dihukum");
-// }
-
-// Jika sudah mencapai 18 : Diizinkan
-// Jika belum mencapai 18 : Ditolak
-
-// var age = 151
-
-// if(age >= 18){
-// Jika age > 18 atau age == 18 (18 ke atas)
-// console.log(`Age : ${age}`);
-// console.log("Permohonan diterima");
-// } else {
-// Jika age < 18
-// console.log(`Age : ${age}`);
-// console.log("Permohonan ditolak");
-// }
-
-// IF, ELSE IF, ELSE
-
-// Jika condition1 bernilai false, maka selanjutnya akan memeriksa condition2.
-// Jika condition2 bernilai true, maka akan menjalankan task2 yang ada di dalam block-nya.
-// Namun jika condition2 bernilai false, akan memeriksa condition berikutnya (jika ada), kalau tidak akan masuk ke bagian else (jika ada)
-
-// if (condition1) {
-// task 1
-// } else if (condition2) {
-// task 2
-// } else {
-// task 3
-// }
-
-// console.log("selesai")
-
-// Nilai Ujian
-
-// Points : 100 - 85 : A
-// Points : 84 - 75 : B
-// Points : 74 - 60 : C
-// Points : 59 - 0 : D
-// Points : undefined : F
-
-// var points = 90;
-// var grade;
-
-// Points : 100 - 85 : A
-// if (points >= 85 && points <= 100) {
-// grade = "A";
-// Points : 84 - 75 : B
-// } else if (points >= 75 && points <= 84) {
-// grade = "B";
-// Points : 74 - 60 : C
-// } else if (points >= 60 && points <= 74) {
-// grade = "C";
-// Points : 59 - 0 : D
-// } else if (points >= 0 && points <= 59) {
-// grade = "D";
-// Points : undefined : F
-// } else {
-// grade = "F";
-// }
-
-// SWITCH CASE
-
-// 1. Dapat memiliki condition lebih dari satu
-// 2. Terdapat block kode yang akan dijalankaan saat semua condition bernilai false (else)
-
-// switch (key) {
-// case value_1:
-// Jika nilai "key" sama dengan "value_1"
-// task 1
-// break;
-
-// case value_2:
-// Jika nilai "key" == "value_1"
-// task 2
-// break;
-
-// default:
-// task default
-// break;
-// }
-
-// var tech = "Javascript";
-
-// switch (tech) {
-// case "Javascript":
-// Jika nilai "tech" sama dengan "Javascript"
-// console.log("Javascript berfungsi untuk mengolah data");
-// Keyword break digunakan untuk menghalangi menjalankan kode pada case lainnya
-// break;
-// case "HTML":
-// Jika nilai "tech" sama dengan "HTML"
-// console.log("HTML berfungsi untuk membuat kerangka website");
-// break;
-
-// default:
-// console.log(`Informasi mengenai ${tech} tidak ditemukan`);
-// }
-
-// var number = 10;
-
-// switch (false) {
-// case number % 2 == 1:
-// console.log(`${number} merupakan bilangan genap`);
-// break;
-
-// default:
-// console.log(`${number} merupakan bilangan ganjil`);
-// }
-
-// TRUTHY & FALSY
-
-// false : 0 , "", undefined, null, NaN
-
-// Number
-// 0 --> false
-// -23 , 234, 23.5 --> true
-// console.log("0", Boolean(0));
-// console.log("-23", Boolean(23));
-// console.log("234", Boolean(234));
-// console.log("-23.5", Boolean(-23.5));
-// console.log("23.5", Boolean(23.5));
-
-// String
-// "" --> false
-// "abcd", " " --> true
-// console.log("", Boolean(""));
-// console.log(" ", Boolean(" "));
-// console.log("abc", Boolean("abc"));
-
-// Array & Object
-// Always true
-// console.log("[]", Boolean([]));
-// console.log("[0]", Boolean([0]));
-// console.log("{}", Boolean({}));
-// console.log("{day: 1}", Boolean({ day: 1 }));
-
-// undefiend, null, NaN
-// Always false
-// console.log("undefiend", Boolean(undefined));
-// console.log("null", Boolean(null));
-// console.log("NaN", Boolean(NaN));
-
-// undefined
-// var day;
-// null
-// var date = null;
-// NaN : Not a Number
-// var text = "abcd";
-// var tertentu = NaN;
-// console.log(parseInt(text));
+console.log("Selesai, dan nilai number sekarang adalah ", number);
