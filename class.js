@@ -72,9 +72,33 @@
 var number = 1;
 
 while (number <= 6) {
+  // Number : 5
   console.log(`Number: ${number}`);
 
   number += 2;
 }
 
 console.log("Selesai, dan nilai number sekarang adalah ", number);
+
+// Rules : hanya boleh menggunakan number++
+
+///////////////////////////////////
+// Menampilkan nilai Genap (0 - 10)
+///////////////////////////////////
+
+// 0 adalah bilangan genap
+// 2 adalah bilangan genap
+// ...
+console.log(`${number} adalah bilangan genap`);
+
+///////////////////////////////////
+// Menampilkan nilai Ganjil (0 - 10)
+///////////////////////////////////
+
+///////////////////////////////////////////////
+// Menampilkan nilai Ganjil dan Genap (0 - 10)
+//////////////////////////////////////////////
+
+// 0 adalah bilangan genap
+// 1 adalah bilangan ganjil
+// ...
