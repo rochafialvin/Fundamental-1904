@@ -26,16 +26,30 @@
 
 // ODD EVEN
 
-var number = parseInt(prompt("Masukkan angka : "));
-var condition;
+// var number = parseInt(prompt("Masukkan angka : "));
+// var condition;
 
-if (number % 2 == 0) {
-  condition = "genap";
-} else {
-  condition = "ganjil";
-}
+// if (number % 2 == 0) {
+//   condition = "genap";
+// } else {
+//   condition = "ganjil";
+// }
 
-var info = `Angka ${number} adalah bilangan ${condition}`;
+// var info = `Angka ${number} adalah bilangan ${condition}`;
 
-alert(info);
-console.log(info);
+// alert(info);
+// console.log(info);
+
+var pets = ["cat"];
+
+// !pets.length > 0
+// !1 > 0
+// !true > 0
+// false > 0
+// false > false
+// false
+console.log(!pets.length > 0);
+
+// true lebih besar dari false
+console.log(true > false);
+console.log(false > true);
