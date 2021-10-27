@@ -40,16 +40,16 @@
 // alert(info);
 // console.log(info);
 
-var pets = ["cat"];
+// var pets = ["cat", "dog"];
 
 // !pets.length > 0
-// !1 > 0
+// !2 > 0
 // !true > 0
 // false > 0
 // false > false
 // false
-console.log(!pets.length > 0);
+// console.log(!pets.length > 0);
 
 // true lebih besar dari false
-console.log(true > false);
-console.log(false > true);
+// console.log(true > false);
+// console.log(false > true);
