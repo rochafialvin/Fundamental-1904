@@ -310,9 +310,9 @@
 
 // undefiend, null, NaN
 // Always false
-console.log("undefiend", Boolean(undefined));
-console.log("null", Boolean(null));
-console.log("NaN", Boolean(NaN));
+// console.log("undefiend", Boolean(undefined));
+// console.log("null", Boolean(null));
+// console.log("NaN", Boolean(NaN));
 
 // undefined
 // var day;
