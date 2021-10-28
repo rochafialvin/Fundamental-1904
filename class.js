@@ -256,16 +256,56 @@
 
 // console.log("selesai");
 
-for (var number = 1; number <= 7; number += 2) {
-  console.log(`FOR : ${number}`);
-}
+// for (var number = 0; number <= 7; number += 2) {
+//   console.log(`FOR : ${number}`);
+// }
 
-console.log("selesai");
+// console.log("selesai");
 
-///////////////////////////
-// Menampilkan nilai ganjil
-///////////////////////////
+/////////////////////////////////////////////////////////////////
+// Menampilkan nilai ganjil 0 - 25 yang merupakan bilangan prima
+// 2, 3, 5, 7, 11, 13, 17, 19, 23
+////////////////////////////////////////////////////////////////
+
+// number == 3
+// for (var number = 0; number < 25; number++) {
+//   // false || true == true
+//   if (
+//     (number % 2 == 1 && number % 3 > 0 && number != 1) ||
+//     number == 2 ||
+//     number == 3
+//   ) {
+//     console.log(number);
+//   }
+// }
+
+// number = 5
+// for (number = 2; number < 25; number++) {
+//   switch (true) {
+//     case number == 2: // false
+//       console.log(`number: ${number}`);
+//       break;
+//     case number == 3: // false
+//       console.log(`number: ${number}`);
+//       break;
+//     case number % 2 == 0: // false
+//       break;
+//     case number % 3 == 0: // false
+//       break;
+//     default:
+//       console.log(`number: ${number}`);
+//       break;
+//   }
+// }
 
 //////////////////////////////////////
 // Menampilkan nilai ganjil dan genap
 /////////////////////////////////////
+
+for (var number = 0; number <= 10; number++) {
+  if (number % 2 == 0) {
+    console.log(`${number} adalah angka genap`);
+  } else {
+    console.log(`${number} adalah angka ganjil`);
+  }
+}
