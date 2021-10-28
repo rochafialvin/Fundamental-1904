@@ -179,21 +179,44 @@
 
 */
 
-var number = 6;
+// number = 7
+// var number = 1;
 
-while (number <= 5) {
-  console.log(`WHILE: ${number}`);
+// do {
+//   console.log(`DO WHILE : ${number}`);
 
-  number++;
-}
+//   number++;
+// } while (number <= 5);
 
-// init
-number = 6; // number = 7
-// menjalankan task
+///////////////////////////////////
+// Menampilkan angka ganjil (5 - 0)
+//////////////////////////////////
+// var number = 5;
+
+// do {
+//   if (number % 2 == 1) {
+//     console.log(`DO WHILE : ${number}`);
+//   }
+
+//   number--;
+// } while (number >= 0);
+
+// console.log("selesai");
+
+/////////////////////////////////////////////
+// Menampilkan angka ganjil dan genap (5 - 0)
+/////////////////////////////////////////////
+
+var number = 5;
+
 do {
-  // menampilkan nilai 'number'
-  console.log(`DO WHILE : ${number}`);
-  // menjumlahkan number dengan nilai 1
-  number++;
-  // evaluasi number
-} while (number <= 5);
+  if (number % 2 == 1) {
+    console.log(`DO WHILE GANJIL : ${number}`);
+  } else {
+    console.log(`DO WHILE GENAP : ${number}`);
+  }
+
+  number--;
+} while (number >= 0);
+
+console.log("selesai");
