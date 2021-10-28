@@ -409,17 +409,73 @@
 // * * * \n
 // * * * \n
 
-var stars = "";
-var rows = 3;
+// var stars = "";
+// var rows = 3;
 
 // stars = '* * * \n* * * \n* * * \n'
 
 // i = 4
 
-// Loop i untuk menentukan banyaknya baris
+// Loop i untuk membuat baris
+// Banyaknya loop i ditentukan dari variabel rows
 for (var i = 1; i <= rows; i++) {
-  // j = 4
+  // Loop j untuk menambahkan bintang per baris
+  // Banyaknya bintang setiap baris = jumlah baris
   for (var j = 1; j <= rows; j++) {
+    // Menambahkan satu bintang dari nilai sebelumnya
+    stars += "* ";
+  }
+
+  // Menambahkan new line setiap selesai membuat satu baris bintang (Horizontal line)
+  stars += "\n";
+}
+
+// Menampilkan hasil akhirnya pada console / terminal
+console.log(stars);
+
+////////////////////////////////////////
+// RIGHT TRIANGLE (segitiga siku - siku)
+///////////////////////////////////////
+
+// *  *  *  *  *
+// *  *  *  *  *
+// *  *  *  *  *
+// *  *  *  *  *
+// *  *  *  *  *
+
+// *
+// *  *
+// *  *  *
+// *  *  *  *
+// *  *  *  *  *
+
+// Persegi : Jumlah bintang perbaris ditentukan dari 'jumlah total' baris
+// Segitiga siku2 : Jumlah bintang perbaris ditentukan dari 'posisi baris' nya.
+
+////////////////////////////////////////////////////
+// baris ke - i
+// nilai pada "i" menunjukkan posisi baris saat ini
+////////////////////////////////////////////////////
+
+// baris ke - 1 : *
+// baris ke - 2 : * *
+// baris ke - 3 : * * *
+// baris ke - 4 : * * * *
+// baris ke - 5 : * * * * *
+
+var stars = "";
+var rows = 3;
+
+// stars = '* \n* * \n* * * \n'
+// i = 4
+
+// Loop i untuk membuat baris
+// loop sebanyak nilai yang disimpan didalam "row"
+for (var i = 1; i <= rows; i++) {
+  // loop j untuk menambahkan bintang
+  // loop sebanyak nilai yang disimpan didalam "i"
+  // "i" adalah posisi baris yang sedang dikerjakan
+  for (var j = 1; j <= i; j++) {
     stars += "* ";
   }
 
