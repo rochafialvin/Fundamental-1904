@@ -309,3 +309,47 @@
 //     console.log(`${number} adalah angka ganjil`);
 //   }
 // }
+
+/////////
+// BREAK
+////////
+
+// Keyword break berfungsi untuk memberhentikan proses loop
+
+// i = 3
+// for (var i = 1; i <= 5; i++) {
+//   console.log(i);
+//   if (i == 3) break;
+// }
+
+// console.log(`nilai i ${i}`);
+
+//////////////////////////////////////////////////////
+// Mencari angka random (0 - 99) yang dapati dibagi 5
+//////////////////////////////////////////////////////
+
+// while (true) {
+// Mencari nilai random 0 - 99
+//   var randomNumber = Math.floor(Math.random() * 100);
+
+// Tampilkan nilai random yang di dapat
+//   console.log(randomNumber);
+
+// Check apakah nilai tersebut habis dibagi 5, jika iya maka hentikan loopnya
+//   if (randomNumber % 5 == 0) break;
+// }
+
+////////////
+// CONTINUE
+///////////
+
+////////////////////////////////////////////////////////
+// Print 1 - 10. Lewati untuk angka yang habis dibagi 3
+////////////////////////////////////////////////////////
+
+// i = 5
+for (var i = 1; i <= 5; i++) {
+  if (i % 3 == 0) continue;
+
+  console.log(i);
+}
