@@ -86,29 +86,55 @@
 // Menampilkan nilai Genap (0 - 10)
 ///////////////////////////////////
 
-// init
-var number = 0;
-// condition
-while (number <= 10) {
-  // task
-  // Jika number merupakan bilangan genap
-  if (number % 2 == 0) {
-    // Tampilkan di terminal
-    console.log(`${number} adalah bilangan genap`);
-  }
+// // init
+// var number = 0;
+// // condition
+// while (number <= 10) {
+//   // task
+//   // Jika number merupakan bilangan genap
+//   // Tampilkan di terminal
+//   if (number % 2 == 0) {
+//     console.log(`${number} adalah bilangan genap`);
+//   }
 
-  // modification
-  number++;
-}
-console.log("Nilai number ", number);
+//   // modification
+//   number++;
+// }
+// console.log("Nilai number ", number);
 ///////////////////////////////////
 // Menampilkan nilai Ganjil (0 - 10)
 ///////////////////////////////////
+// init
+// var number = 0;
+// condition
+// while (number <= 10) {
+// task
+// Jika number merupakan bilangan ganjil
+// Tampilkan di terminal
+//   if (number % 2 == 1) {
+// console.log(`${number} adalah bilangan ganjil`);
+//   }
+
+// modification
+//   number++;
+// }
+// console.log("Nilai number ", number);
 
 ///////////////////////////////////////////////
 // Menampilkan nilai Ganjil dan Genap (0 - 10)
 //////////////////////////////////////////////
 
-// 0 adalah bilangan genap
-// 1 adalah bilangan ganjil
-// ...
+// number = 4
+var number = 0;
+
+while (number <= 10) {
+  // Jika number merupakan bilangan ganjil
+  if (number % 2 == 1) {
+    console.log(`${number} adalah bilangan ganjil`);
+  } else {
+    console.log(`${number} adalah bilangan genap`);
+  }
+
+  number++;
+}
+console.log("Nilai number ", number);
