@@ -207,16 +207,65 @@
 // Menampilkan angka ganjil dan genap (5 - 0)
 /////////////////////////////////////////////
 
-var number = 5;
+// var number = 5;
 
-do {
-  if (number % 2 == 1) {
-    console.log(`DO WHILE GANJIL : ${number}`);
-  } else {
-    console.log(`DO WHILE GENAP : ${number}`);
-  }
+// do {
+//   if (number % 2 == 1) {
+//     console.log(`DO WHILE GANJIL : ${number}`);
+//   } else {
+//     console.log(`DO WHILE GENAP : ${number}`);
+//   }
 
-  number--;
-} while (number >= 0);
+//   number--;
+// } while (number >= 0);
+
+// console.log("selesai");
+
+///////////
+// For Loop
+///////////
+
+/*
+    Alur Proses For Loop
+
+    1. Membuat variabel dengan nilai awal, digunakan sebagai acuan loop (init)
+    2. Mengevaluasi condition (condition)
+        a. condition : true, lanjut ke langkah 3
+        b. condition : false, keluar dari block loop
+    3. Menyelesaikan task
+    4. Menjalankan modification
+    5. Kembali ke langkah 2
+
+*/
+
+/*
+    Syntax for loop
+
+    for(init ; condition ; modification){
+
+        task
+    
+    }
+
+*/
+
+// number = 4
+// for (var number = 0; number <= 3; number++) {
+//   console.log(`FOR : ${number}`);
+// }
+
+// console.log("selesai");
+
+for (var number = 1; number <= 7; number += 2) {
+  console.log(`FOR : ${number}`);
+}
 
 console.log("selesai");
+
+///////////////////////////
+// Menampilkan nilai ganjil
+///////////////////////////
+
+//////////////////////////////////////
+// Menampilkan nilai ganjil dan genap
+/////////////////////////////////////
