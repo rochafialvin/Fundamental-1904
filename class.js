@@ -464,7 +464,7 @@ console.log(stars);
 // baris ke - 5 : * * * * *
 
 var stars = "";
-var rows = 3;
+var rows = 5;
 
 // stars = '* \n* * \n* * * \n'
 // i = 4
