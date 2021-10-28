@@ -69,16 +69,16 @@
 ///////////////
 
 // number = 7
-var number = 1;
+// var number = 1;
 
-while (number <= 6) {
-  // Number : 5
-  console.log(`Number: ${number}`);
+// while (number <= 6) {
+// Number : 5
+//   console.log(`Number: ${number}`);
 
-  number += 2;
-}
+//   number += 2;
+// }
 
-console.log("Selesai, dan nilai number sekarang adalah ", number);
+// console.log("Selesai, dan nilai number sekarang adalah ", number);
 
 // Rules : hanya boleh menggunakan number++
 
@@ -86,11 +86,21 @@ console.log("Selesai, dan nilai number sekarang adalah ", number);
 // Menampilkan nilai Genap (0 - 10)
 ///////////////////////////////////
 
-// 0 adalah bilangan genap
-// 2 adalah bilangan genap
-// ...
-console.log(`${number} adalah bilangan genap`);
+// init
+var number = 0;
+// condition
+while (number <= 10) {
+  // task
+  // Jika number merupakan bilangan genap
+  if (number % 2 == 0) {
+    // Tampilkan di terminal
+    console.log(`${number} adalah bilangan genap`);
+  }
 
+  // modification
+  number++;
+}
+console.log("Nilai number ", number);
 ///////////////////////////////////
 // Menampilkan nilai Ganjil (0 - 10)
 ///////////////////////////////////
