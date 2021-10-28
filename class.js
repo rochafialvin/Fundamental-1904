@@ -348,8 +348,82 @@
 ////////////////////////////////////////////////////////
 
 // i = 5
-for (var i = 1; i <= 5; i++) {
-  if (i % 3 == 0) continue;
+// for (var i = 1; i <= 5; i++) {
+//   if (i % 3 == 0) continue;
 
-  console.log(i);
+//   console.log(i);
+// }
+
+///////////////////////////
+// Drawing Horizontal Line
+//////////////////////////
+
+//////////////////////////////////////
+// Menjumlahkan 0 + 1 + 2 + 3 + 4 + 5
+/////////////////////////////////////
+
+// var number = 0;
+
+// for (var i = 1; i <= 5; i++) {
+//   number += i;
+// }
+
+// console.log(number);
+
+/////////////////////
+// Membuat Horizontal
+/////////////////////
+
+// '******'
+
+// stars = '* * * * * '
+// var stars = "";
+
+// i = 6
+// for (var i = 1; i <= 5; i++) {
+//   stars += "* ";
+// }
+
+// console.log(stars.length);
+
+////////////////////
+// Membuat Vertical
+///////////////////
+
+// "*\n*\n*\n*\n"
+
+// var stars = "";
+
+// i = 1
+// for (var i = 1; i <= 5; i++) {
+//   stars += "*\n";
+// }
+
+// console.log(stars);
+
+//////////
+// SQUARE
+//////////
+
+// * * * \n
+// * * * \n
+// * * * \n
+
+var stars = "";
+var rows = 3;
+
+// stars = '* * * \n* * * \n* * * \n'
+
+// i = 4
+
+// Loop i untuk menentukan banyaknya baris
+for (var i = 1; i <= rows; i++) {
+  // j = 4
+  for (var j = 1; j <= rows; j++) {
+    stars += "* ";
+  }
+
+  stars += "\n";
 }
+
+console.log(stars);
