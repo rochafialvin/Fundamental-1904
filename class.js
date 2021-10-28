@@ -13,9 +13,9 @@
 /*
     Alur Proses
 
-    Alur A: While dan For
+    Alur A (Condition first): While dan For
 
-    Alur B: Do While
+    Alur B (Task first) : Do While
 
 */
 
@@ -125,16 +125,75 @@
 //////////////////////////////////////////////
 
 // number = 4
-var number = 0;
+// var number = 0;
 
-while (number <= 10) {
-  // Jika number merupakan bilangan ganjil
-  if (number % 2 == 1) {
-    console.log(`${number} adalah bilangan ganjil`);
-  } else {
-    console.log(`${number} adalah bilangan genap`);
-  }
+// while (number <= 10) {
+// Jika number merupakan bilangan ganjil
+//   if (number % 2 == 1) {
+// console.log(`${number} adalah bilangan ganjil`);
+//   } else {
+// console.log(`${number} adalah bilangan genap`);
+//   }
+
+//   number++;
+// }
+
+/////////////////
+// DO WHILE LOOP
+/////////////////
+
+/*
+    Alur Proses While Loop (Condition first)
+
+    1. Membuat variabel dengan nilai awal, digunakan sebagai acuan loop (init)
+    2. Mengevaluasi condition (condition)
+        a. condition : true, lanjut ke langkah 3
+        b. condition : false, keluar dari block loop
+    3. Menyelesaikan task
+    4. Menjalankan modification
+    5. Kembali ke langkah 2
+
+*/
+
+/*
+    Alur Proses DO WHILE (task first)
+
+    1. Membuat variabel dengan nilai awal, digunakan sebagai acuan loop (init)
+    2. Menyelesaikan task
+    3. Menjalankan modification
+    4. Mengevaluasi condition (condition)
+        a. condition : true, lanjut ke langkah 2
+        b. condition : false, keluar dari block loop
+
+*/
+
+/*
+
+    Synatx Do While
+
+    do{
+
+        statement
+
+    } while (condition)
+
+*/
+
+var number = 6;
+
+while (number <= 5) {
+  console.log(`WHILE: ${number}`);
 
   number++;
 }
-console.log("Nilai number ", number);
+
+// init
+number = 6; // number = 7
+// menjalankan task
+do {
+  // menampilkan nilai 'number'
+  console.log(`DO WHILE : ${number}`);
+  // menjumlahkan number dengan nilai 1
+  number++;
+  // evaluasi number
+} while (number <= 5);
