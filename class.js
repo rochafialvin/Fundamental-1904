@@ -223,3 +223,161 @@
 // delete things[2];
 // Menampilkan array things pada console
 // console.log(things);
+
+/////////////////////////////////
+// SLICE : Copy value dari array
+/////////////////////////////////
+
+/*
+
+    Syntax
+
+    array.slice(start index, end index )
+
+    start index : index awal dari data yang akan dicopy
+    end index : index akhir dari data yang akan dicopy (tidak termasuk)
+
+*/
+
+// var fruits = ["apple", "banana", "cherry", "lemon", "watermelon"];
+
+// console.table(fruits);
+
+// copy banana dan cherry
+// var banCherry = fruits.slice(1, 3);
+// console.table(banCherry);
+
+// copy banana, cherry, dan lemon
+// tidak ada index ke 5 namun tetap berjalan baik
+// var banCheMon = fruits.slice(2, 5);
+// copy value dari index 2 hingga index terakhir
+// jika tidak menyebutkan index akhir, maka akan mengcopy hingga data terakhir
+// var banCheMon = fruits.slice(2);
+// console.table(banCheMon);
+
+/*
+
+    Method yang mengubah nilai asli :
+        1. push
+        2. pop
+        3. shift
+        4. unshift
+        5. splice
+
+    Method yang tidak mengubah nilai asli (hasil operasinya disimpan ke variabel baru) :
+        1. slice
+        2. includes
+        3. indexOf
+
+*/
+
+/////////////////////////////////////////////////////////////////////
+// INCLUDES : Memeriksa apakah suatu array mengandung value tertentu
+/////////////////////////////////////////////////////////////////////
+
+// Membuat array yang menyimpan 6 value
+// var colors = ["black", "grey", "white", "red", "green", "blue"];
+
+// true
+// var colorRed = colors.includes("red");
+// console.log(colorRed);
+
+// false
+// var colPurple = colors.includes("purple");
+// console.log(colPurple);
+
+// false
+// var colRedCapital = colors.includes("Red");
+// console.log(colRedCapital);
+
+///////////////////////////////////////////////////////
+// INDEXOF : Mencari index dari suatu data pada array
+/////////////////////////////////////////////////////
+
+// Membuat array yang menyimpan 6 value
+// var colors = ["black", "grey", "white", "red", "green", "blue"];
+
+// 3
+// var idxRed = colors.indexOf("red");
+// console.log(idxRed);
+
+// 1
+// var idxGrey = colors.indexOf("grey");
+// console.log(idxGrey);
+
+// -1
+// var idxPurple = colors.indexOf("purple");
+// console.log(idxPurple);
+
+//////////////////////////////////////////////////////////////////////
+// SORT : Mengurutkan data pada array secara ascending (0 - 9 / a - z)
+//////////////////////////////////////////////////////////////////////
+
+// var animals = ["anoa", "dragon", "cameleon", "bird", "cat"];
+
+// console.table(animals);
+
+// animals.sort();
+
+// console.table(animals);
+
+// var numbers = [32, 11, 41, 2];
+
+// var result = numbers.sort();
+
+// console.table(result);
+
+// console.table(numbers);
+
+/////////////////////////////////////////////////
+// REVERSE : Membalikkan urutan data pada array
+/////////////////////////////////////////////////
+
+// var days = ["sunday", "monday", "tuesday", "wednesday"];
+
+// console.table(days);
+
+// days.reverse();
+
+// console.table(days);
+
+/////////////////////////////////////////////////////////////////
+// JOIN : Menggabungkan data pada array dengan karakter tertentu
+/////////////////////////////////////////////////////////////////
+
+// var days = ["sunday", "monday", "tuesday", "wednesday"];
+
+// var joinDash = days.join(" - ");
+// console.log(joinDash);
+
+// var joinComma = days.join(", ");
+// console.log(joinComma);
+
+// var joinSpace = days.join(" ");
+// console.log(joinSpace);
+
+// var joinAnd = days.join(" and ");
+// console.log(joinAnd);
+
+// var joinSpace = days.join("");
+// console.log(joinSpace);
+
+/////////////////////////////////////////////////////////
+// CONCAT : Menggabungkan data dari dua array atau lebih
+/////////////////////////////////////////////////////////
+
+var days = ["sunday", "monday", "tuesday", "wednesday"];
+var animals = ["anoa", "dragon", "cameleon", "bird", "cat"];
+var fruits = ["apple", "banana", "cherry", "lemon"];
+
+// days + fruits
+var dayFruits = days.concat(fruits);
+console.log(dayFruits);
+
+// fruits + animals
+var fruitAnim = fruits.concat(animals);
+console.log(fruitAnim);
+
+// days + animals + fruits
+var allOfThem = days.concat(animals, fruits);
+console.table(allOfThem);
