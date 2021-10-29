@@ -366,18 +366,77 @@
 // CONCAT : Menggabungkan data dari dua array atau lebih
 /////////////////////////////////////////////////////////
 
-var days = ["sunday", "monday", "tuesday", "wednesday"];
-var animals = ["anoa", "dragon", "cameleon", "bird", "cat"];
-var fruits = ["apple", "banana", "cherry", "lemon"];
+// var days = ["sunday", "monday", "tuesday", "wednesday"];
+// var animals = ["anoa", "dragon", "cameleon", "bird", "cat"];
+// var fruits = ["apple", "banana", "cherry", "lemon"];
 
 // days + fruits
-var dayFruits = days.concat(fruits);
-console.log(dayFruits);
+// var dayFruits = days.concat(fruits);
+// console.log(dayFruits);
 
 // fruits + animals
-var fruitAnim = fruits.concat(animals);
-console.log(fruitAnim);
+// var fruitAnim = fruits.concat(animals);
+// console.log(fruitAnim);
 
 // days + animals + fruits
-var allOfThem = days.concat(animals, fruits);
-console.table(allOfThem);
+// var allOfThem = days.concat(animals, fruits);
+// console.table(allOfThem);
+
+//////////////////////////////////////////////////////////////////////////////
+// LOOP WITH ARRAY : Melakukan looping untuk memproses setiap data pada array
+//////////////////////////////////////////////////////////////////////////////
+
+/*
+
+    Result
+
+    Terdapat 5 kategori film :
+    Horror
+    Sci-Fi
+    Thriller
+    Adventure
+    Animation
+
+*/
+
+// var categories = ["Horror", "Sci-Fi", "Thriller", "Adventure", "Animation"];
+
+// var listCategory = `Terdapat ${categories.length} kategori film :\n`;
+
+// 'Terdapat 5 kategori film :\nHorror\nSci-Fi\nThriller\nAdventure\nAnimation\n'
+
+// i = 5
+// for (var i = 0; i < categories.length; i++) {
+//   listCategory += `${categories[i]}\n`;
+// }
+
+// console.log(listCategory);
+
+///////////////////////////////////
+// ARRAY 2 D : Array di dalam array
+///////////////////////////////////
+
+// var things = [
+//   ["red pen", "blue pen"],
+//   ["analog clock", "digital clock"],
+//   ["futsal shoes", "badminton shoes"],
+// ];
+
+// [ "red pen", "blue pen" ]
+// console.log(things[0]);
+// [ "futsal shoes", "badminton shoes" ]
+// console.log(things[2]);
+
+// digital clock
+// var clocks = things[1];
+// console.log(clocks[1]);
+// digital clock
+// console.log(things[1][1]);
+
+// ADD and REMOVE
+
+// things.push(["apple", "banana"]);
+// things.unshift(["laptop", "personal computer"]);
+// things.pop();
+// things.shift();
+// console.table(things);
