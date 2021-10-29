@@ -58,14 +58,14 @@
 // SORT DESCENDING ( 9 - 0 ) ( z - a )
 ///////////////////////////////////////
 
-var names = ["Alex", "Elena", "Chaplin", "Bernard", "Dany"];
+// var names = ["Alex", "Elena", "Chaplin", "Bernard", "Dany"];
 
-console.log(names);
+// console.log(names);
 
-names.sort();
+// names.sort();
 
-console.log(names);
+// console.log(names);
 
-names.reverse();
+// names.reverse();
 
-console.log(names);
+// console.log(names);
