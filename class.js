@@ -1,485 +1,64 @@
-// LOOP STATEMENTS
-// Statement yang memungkinkan kita untuk mengulang suatu proses / task
+////////////////
+// Syntax Array
+////////////////
 
-// WHILE Loop
+// Membuat array yang menyimpan tiga value
+var things = ["books", "pen", "clock"];
+// Menampilkan array things dalam bentuk table
+console.table(things);
+// Membuat array yang menyimpan empat value
+var random = [23, "Michael", true, 3.14];
+// Menampilkan array random dalam bentuk table
+console.table(random);
 
-/*
-    Aturan Utama
-    Berlaku untuk segala jenis loop : while, do while, for
+//////////////
+// Access Data
+//////////////
 
-    "Selama 'condition' bernilai 'true', maka 'task' yang ada pada loop akan diproses"
-*/
+// Index dapat dikatakan sebagai sistem penomoran data pada array yang dimulai dari nol
 
-/*
-    Alur Proses
-
-    Alur A (Condition first): While dan For
-
-    Alur B (Task first) : Do While
-
-*/
-
-/*
-    Syntax
-
-    while (condition) {
-
-        task
-
-        modification
-
-    }
-*/
-
-///////////////////////////
-// Menampilkan angka 1 - 5
-///////////////////////////
-
-/*
-    Alur Proses While Loop
-
-    1. Membuat variabel dengan nilai awal, digunakan sebagai acuan loop (init)
-    2. Mengevaluasi condition (condition)
-        a. condition : true, lanjut ke langkah 3
-        b. condition : false, keluar dari block loop
-    3. Menyelesaikan task
-    4. Menjalankan modification
-    5. Kembali ke langkah 2
-
-*/
-
-// number = 6
-// init
-// var number = 1;
-
-// condition
-// while (number <= 5) {
-// task
-// console.log(`Number: ${number}`);
-
-// modification
-// number++;
-// }
-
-// console.log(number);
-// console.log("Selesai");
+// Mengakses data pada array things index ke satu
+console.log("things 0 : " + things[1]);
+// Mengakses data pada array random index ke nol
+console.log("random 0 " + random[0]);
+// Mengakses data pada array random index ke satu
+console.log("random 1 " + random[1]);
 
 ///////////////
-// Dua Langkah
+// Change Data
 ///////////////
 
-// number = 7
-// var number = 1;
-
-// while (number <= 6) {
-// Number : 5
-//   console.log(`Number: ${number}`);
-
-//   number += 2;
-// }
-
-// console.log("Selesai, dan nilai number sekarang adalah ", number);
-
-// Rules : hanya boleh menggunakan number++
-
-///////////////////////////////////
-// Menampilkan nilai Genap (0 - 10)
-///////////////////////////////////
-
-// // init
-// var number = 0;
-// // condition
-// while (number <= 10) {
-//   // task
-//   // Jika number merupakan bilangan genap
-//   // Tampilkan di terminal
-//   if (number % 2 == 0) {
-//     console.log(`${number} adalah bilangan genap`);
-//   }
-
-//   // modification
-//   number++;
-// }
-// console.log("Nilai number ", number);
-///////////////////////////////////
-// Menampilkan nilai Ganjil (0 - 10)
-///////////////////////////////////
-// init
-// var number = 0;
-// condition
-// while (number <= 10) {
-// task
-// Jika number merupakan bilangan ganjil
-// Tampilkan di terminal
-//   if (number % 2 == 1) {
-// console.log(`${number} adalah bilangan ganjil`);
-//   }
-
-// modification
-//   number++;
-// }
-// console.log("Nilai number ", number);
-
-///////////////////////////////////////////////
-// Menampilkan nilai Ganjil dan Genap (0 - 10)
-//////////////////////////////////////////////
-
-// number = 4
-// var number = 0;
-
-// while (number <= 10) {
-// Jika number merupakan bilangan ganjil
-//   if (number % 2 == 1) {
-// console.log(`${number} adalah bilangan ganjil`);
-//   } else {
-// console.log(`${number} adalah bilangan genap`);
-//   }
-
-//   number++;
-// }
-
-/////////////////
-// DO WHILE LOOP
-/////////////////
-
-/*
-    Alur Proses While Loop (Condition first)
-
-    1. Membuat variabel dengan nilai awal, digunakan sebagai acuan loop (init)
-    2. Mengevaluasi condition (condition)
-        a. condition : true, lanjut ke langkah 3
-        b. condition : false, keluar dari block loop
-    3. Menyelesaikan task
-    4. Menjalankan modification
-    5. Kembali ke langkah 2
-
-*/
-
-/*
-    Alur Proses DO WHILE (task first)
-
-    1. Membuat variabel dengan nilai awal, digunakan sebagai acuan loop (init)
-    2. Menyelesaikan task
-    3. Menjalankan modification
-    4. Mengevaluasi condition (condition)
-        a. condition : true, lanjut ke langkah 2
-        b. condition : false, keluar dari block loop
-
-*/
-
-/*
-
-    Synatx Do While
-
-    do{
-
-        statement
-
-    } while (condition)
-
-*/
-
-// number = 7
-// var number = 1;
-
-// do {
-//   console.log(`DO WHILE : ${number}`);
-
-//   number++;
-// } while (number <= 5);
-
-///////////////////////////////////
-// Menampilkan angka ganjil (5 - 0)
-//////////////////////////////////
-// var number = 5;
-
-// do {
-//   if (number % 2 == 1) {
-//     console.log(`DO WHILE : ${number}`);
-//   }
-
-//   number--;
-// } while (number >= 0);
-
-// console.log("selesai");
-
-/////////////////////////////////////////////
-// Menampilkan angka ganjil dan genap (5 - 0)
-/////////////////////////////////////////////
-
-// var number = 5;
-
-// do {
-//   if (number % 2 == 1) {
-//     console.log(`DO WHILE GANJIL : ${number}`);
-//   } else {
-//     console.log(`DO WHILE GENAP : ${number}`);
-//   }
-
-//   number--;
-// } while (number >= 0);
-
-// console.log("selesai");
-
-///////////
-// For Loop
-///////////
-
-/*
-    Alur Proses For Loop
-
-    1. Membuat variabel dengan nilai awal, digunakan sebagai acuan loop (init)
-    2. Mengevaluasi condition (condition)
-        a. condition : true, lanjut ke langkah 3
-        b. condition : false, keluar dari block loop
-    3. Menyelesaikan task
-    4. Menjalankan modification
-    5. Kembali ke langkah 2
-
-*/
-
-/*
-    Syntax for loop
-
-    for(init ; condition ; modification){
-
-        task
-    
-    }
-
-*/
-
-// number = 4
-// for (var number = 0; number <= 3; number++) {
-//   console.log(`FOR : ${number}`);
-// }
-
-// console.log("selesai");
-
-// for (var number = 0; number <= 7; number += 2) {
-//   console.log(`FOR : ${number}`);
-// }
-
-// console.log("selesai");
-
-/////////////////////////////////////////////////////////////////
-// Menampilkan nilai ganjil 0 - 25 yang merupakan bilangan prima
-// 2, 3, 5, 7, 11, 13, 17, 19, 23
-////////////////////////////////////////////////////////////////
-
-// number == 3
-// for (var number = 0; number < 25; number++) {
-//   // false || true == true
-//   if (
-//     (number % 2 == 1 && number % 3 > 0 && number != 1) ||
-//     number == 2 ||
-//     number == 3
-//   ) {
-//     console.log(number);
-//   }
-// }
-
-// number = 5
-// for (number = 2; number < 25; number++) {
-//   switch (true) {
-//     case number == 2: // false
-//       console.log(`number: ${number}`);
-//       break;
-//     case number == 3: // false
-//       console.log(`number: ${number}`);
-//       break;
-//     case number % 2 == 0: // false
-//       break;
-//     case number % 3 == 0: // false
-//       break;
-//     default:
-//       console.log(`number: ${number}`);
-//       break;
-//   }
-// }
-
-//////////////////////////////////////
-// Menampilkan nilai ganjil dan genap
-/////////////////////////////////////
-
-// for (var number = 0; number <= 10; number++) {
-//   if (number % 2 == 0) {
-//     console.log(`${number} adalah angka genap`);
-//   } else {
-//     console.log(`${number} adalah angka ganjil`);
-//   }
-// }
-
-/////////
-// BREAK
-////////
-
-// Keyword break berfungsi untuk memberhentikan proses loop
-
-// i = 3
-// for (var i = 1; i <= 5; i++) {
-//   console.log(i);
-//   if (i == 3) break;
-// }
-
-// console.log(`nilai i ${i}`);
-
-//////////////////////////////////////////////////////
-// Mencari angka random (0 - 99) yang dapati dibagi 5
-//////////////////////////////////////////////////////
-
-// while (true) {
-// Mencari nilai random 0 - 99
-//   var randomNumber = Math.floor(Math.random() * 100);
-
-// Tampilkan nilai random yang di dapat
-//   console.log(randomNumber);
-
-// Check apakah nilai tersebut habis dibagi 5, jika iya maka hentikan loopnya
-//   if (randomNumber % 5 == 0) break;
-// }
-
-////////////
-// CONTINUE
-///////////
-
-////////////////////////////////////////////////////////
-// Print 1 - 10. Lewati untuk angka yang habis dibagi 3
-////////////////////////////////////////////////////////
-
-// i = 5
-// for (var i = 1; i <= 5; i++) {
-//   if (i % 3 == 0) continue;
-
-//   console.log(i);
-// }
-
-///////////////////////////
-// Drawing Horizontal Line
-//////////////////////////
-
-//////////////////////////////////////
-// Menjumlahkan 0 + 1 + 2 + 3 + 4 + 5
-/////////////////////////////////////
-
-// var number = 0;
-
-// for (var i = 1; i <= 5; i++) {
-//   number += i;
-// }
-
-// console.log(number);
-
-/////////////////////
-// Membuat Horizontal
-/////////////////////
-
-// '******'
-
-// stars = '* * * * * '
-// var stars = "";
-
-// i = 6
-// for (var i = 1; i <= 5; i++) {
-//   stars += "* ";
-// }
-
-// console.log(stars.length);
-
-////////////////////
-// Membuat Vertical
+// Membuat array dengan tiga value
+var things = ["books", "pen", "clock"];
+// Menampilkan array dalam bentuk table pada console
+console.table(things);
+// Mengganti value pada index ke nol
+things[0] = "paper";
+// Mengganti value pada index ke dua
+things[2] = "shoes";
+// Menampilkan array things dalam bentuk table
+console.table(things);
+
+///////////////////
+// Create New Index
 ///////////////////
 
-// "*\n*\n*\n*\n"
+// Membuat array dengan tiga value
+var things = ["books", "pen", "clock"];
+// Menambahkan data baru yang sekaligus membuat index baru
+things[3] = "shoes";
+// Menampilkan array things dalam bentuk table
+console.table(things);
+// Menambahkan data baru yang sekaligus membuat index baru
+things[5] = "glass";
+// Menampilkan array things dalam bentuk table
+console.log(things);
+// Menampilkan value pada index ke empat, yang mana adalah undefiend
+console.log(things[4]);
 
-// var stars = "";
+///////////////////
+// Length of Array
+///////////////////
 
-// i = 1
-// for (var i = 1; i <= 5; i++) {
-//   stars += "*\n";
-// }
-
-// console.log(stars);
-
-//////////
-// SQUARE
-//////////
-
-// * * * \n
-// * * * \n
-// * * * \n
-
-// var stars = "";
-// var rows = 3;
-
-// stars = '* * * \n* * * \n* * * \n'
-
-// i = 4
-
-// Loop i untuk membuat baris
-// Banyaknya loop i ditentukan dari variabel rows
-for (var i = 1; i <= rows; i++) {
-  // Loop j untuk menambahkan bintang per baris
-  // Banyaknya bintang setiap baris = jumlah baris
-  for (var j = 1; j <= rows; j++) {
-    // Menambahkan satu bintang dari nilai sebelumnya
-    stars += "* ";
-  }
-
-  // Menambahkan new line setiap selesai membuat satu baris bintang (Horizontal line)
-  stars += "\n";
-}
-
-// Menampilkan hasil akhirnya pada console / terminal
-console.log(stars);
-
-////////////////////////////////////////
-// RIGHT TRIANGLE (segitiga siku - siku)
-///////////////////////////////////////
-
-// *  *  *  *  *
-// *  *  *  *  *
-// *  *  *  *  *
-// *  *  *  *  *
-// *  *  *  *  *
-
-// *
-// *  *
-// *  *  *
-// *  *  *  *
-// *  *  *  *  *
-
-// Persegi : Jumlah bintang perbaris ditentukan dari 'jumlah total' baris
-// Segitiga siku2 : Jumlah bintang perbaris ditentukan dari 'posisi baris' nya.
-
-////////////////////////////////////////////////////
-// baris ke - i
-// nilai pada "i" menunjukkan posisi baris saat ini
-////////////////////////////////////////////////////
-
-// baris ke - 1 : *
-// baris ke - 2 : * *
-// baris ke - 3 : * * *
-// baris ke - 4 : * * * *
-// baris ke - 5 : * * * * *
-
-var stars = "";
-var rows = 5;
-
-// stars = '* \n* * \n* * * \n'
-// i = 4
-
-// Loop i untuk membuat baris
-// loop sebanyak nilai yang disimpan didalam "row"
-for (var i = 1; i <= rows; i++) {
-  // loop j untuk menambahkan bintang
-  // loop sebanyak nilai yang disimpan didalam "i"
-  // "i" adalah posisi baris yang sedang dikerjakan
-  for (var j = 1; j <= i; j++) {
-    stars += "* ";
-  }
-
-  stars += "\n";
-}
-
-console.log(stars);
+// Menampilkan jumlah index pada arrah things menggunakan property length
+console.log(`Length dari array things : ${things.length}`);
