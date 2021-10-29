@@ -403,9 +403,11 @@
 
 // var listCategory = `Terdapat ${categories.length} kategori film :\n`;
 
+// listCategory
 // 'Terdapat 5 kategori film :\nHorror\nSci-Fi\nThriller\nAdventure\nAnimation\n'
 
 // i = 5
+// categories.length = 5
 // for (var i = 0; i < categories.length; i++) {
 //   listCategory += `${categories[i]}\n`;
 // }
