@@ -14,5 +14,5 @@ var numbers1 = [3, 5, 22, 11, 28, 29]; // --> 30
 var numbers2 = [9, 2, 42]; // --> 53
 
 var results1 =
-  numbers1[0] + numbers1[1] + numbers1[2] + numbers1[3] + numbers1[4];
+  
 // console.log(results1);

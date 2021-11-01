@@ -41,3 +41,52 @@
 
 // Untuk menentukan banyaknya loop, cukup ganti angka 6
 // var i = 1 ; i <= 6 ; i++
+
+///////////
+// ARRAY //
+///////////
+
+// Dapat menyimpan banyak data
+// var colors = ["Red", "Green", "Blue"];
+
+// var things = [
+//   ["green pen", "yellow pen"],
+//   ["whiteboard", "blackboard"],
+//   ["small cup", "medium cup", "large cup"],
+// ];
+
+// console.log(colors[1]); // Green
+// console.log(things[1]); // ["whiteboard", "blackboard"]
+// x = array, array itu memiliki index
+// x = ["whiteboard", "blackboard"]
+// var x = things[1];
+
+// Menampilkan whiteboard
+// console.log(x[0]);
+// console.log(things[1][0]);
+// console.log(things[2][2]);
+
+// - Clue : variable fruits kini berisi array dua dimensi. Dimana isi dari array tersebut adalah array juga yang setiap arraynya akan menyimpan informasi nama buah, harga satuan buah, dan stock buah yang dimiliki.
+
+var fruits = [
+  ["Apple", 10000, 5],
+  ["Grape", 15000, 7],
+  ["Orange", 20000, 10],
+];
+
+var carts = [];
+
+// Mau beli buah apa ?
+// 0. Apple
+// 1. Grape
+// 2. Orange
+
+var userInput = prompt("Mau beli apa ?");
+console.log(fruits[userInput]);
+
+// qtyOrange = 3
+// fruits[0] = ["JEruk", 15000, 7]
+// fruits[0][2] = 5
+if (qtyOrange > fruits[0][2]) {
+  console.log("Permintaan apple melebihi stock");
+}
