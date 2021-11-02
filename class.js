@@ -162,13 +162,13 @@ var numbers = [1, 2, 3];
 // [1, 2, 3], "addition", 10 --> [11, 12, 13]
 
 var arrCalculator = (arr, operation, operand) => {
+  var arrResult = [];
   // cari tahu operasi apa yang akan dijalankan
   switch (operation) {
     // arr = [1, 2, 3]
     // operation = "addition"
     // operand = 10
     case "addition":
-      var arrResult = [];
       // lakukan operasi terhadap seluruh data pada array
       for (var i = 0; i < arr.length; i++) {
         var result = arr[i] + operand;
@@ -180,7 +180,25 @@ var arrCalculator = (arr, operation, operand) => {
       console.log(`Before : ${arr}\nAfter : ${arrResult}`);
 
       break;
+
+    case "multiplication":
+      // lakukan operasi terhadap seluruh data pada array
+      for (var i = 0; i < arr.length; i++) {
+        var result = arr[i] * operand;
+        // setiap hasil dari satu kali pengerjaan operasinya dimasukkan ke dalam array baru (arrResult)
+        arrResult.push(result);
+      }
+
+      // console.log nilai awal dan nilai akhir
+      console.log(`Before : ${arr}\nAfter : ${arrResult}`);
+
+      break;
+
+    default:
+      console.log("Invalid Operation");
   }
 };
 
 arrCalculator(numbers, "addition", 2);
+arrCalculator(numbers, "multiplication", 2);
+arrCalculator(numbers, "science fiction", 2);
