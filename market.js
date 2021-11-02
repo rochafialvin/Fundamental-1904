@@ -53,6 +53,50 @@ switch (menu) {
     }
 
     alert(fruitList);
+    break;
+  case 2:
+    // Minta input data buah baru (nama, harga satuan, stock)
+    var newName = prompt("Masukan nama buah");
+    var newPrice = parseInt(prompt("Masukan harga buah"));
+    var newStock = parseInt(prompt("Masukan stock buah"));
+
+    // Susun data baru menjadi 1 buah array
+    var newFruit = [newName, newPrice, newStock];
+
+    // Masukkan array baru ke dalam array fruits
+    fruits.push(newFruit);
+
+    var fruitList = `Daftar buah\n\n`;
+
+    for (var i = 0; i < fruits.length; i++) {
+      fruitList += `${i}. ${fruits[i][0]} || Rp.${fruits[i][1]} || stock: ${fruits[i][2]}\n`;
+    }
+
+    alert(fruitList);
+    break;
+
+  case 3:
+    // Tampilkan daftar buah, dan minta user pilih buah yang mau di hapus
+    var fruitList = `Menghapus buah\n\n`;
+
+    for (var i = 0; i < fruits.length; i++) {
+      fruitList += `${i}. ${fruits[i][0]} || Rp.${fruits[i][1]} || stock: ${fruits[i][2]}\n`;
+    }
+
+    // selectedIndex = 0 (Apple)
+    var selectedIndex = parseInt(prompt(fruitList));
+
+    // index awal beroperasi, banyak data yang ingin di hapus
+    fruits.splice(selectedIndex, 1);
+
+    var fruitList = `Daftar buah\n\n`;
+
+    for (var i = 0; i < fruits.length; i++) {
+      fruitList += `${i}. ${fruits[i][0]} || Rp.${fruits[i][1]} || stock: ${fruits[i][2]}\n`;
+    }
+
+    alert(fruitList);
+    break;
 }
 
 // do {
