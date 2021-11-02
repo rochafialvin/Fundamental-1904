@@ -110,16 +110,77 @@
 //////////////////////
 
 // kita punya function namanya introduction yang memiliki satu buah parameter namanya firstName
-var introduction = (firstName) => {
-  console.log(`Halo, nama saya adalah ${firstName}`);
-};
+// var introduction = (firstName) => {
+//   console.log(`Halo, nama saya adalah ${firstName}`);
+// };
 
 // introduction("Miraj");
 // introduction("Khan");
 
-var fullName = (lastName, firstName) => {
-  console.log(`Halo, nama lengkap saya adalah ${firstName} ${lastName}`);
+// var fullName = (lastName, firstName) => {
+//   console.log(`Halo, nama lengkap saya adalah ${firstName} ${lastName}`);
+// };
+
+// fullName("Kyojuro", "Rengoku");
+// fullName("Isaac", "Newton");
+
+// var addition = (num1, num2) => {
+//   var result = num1 + num2;
+//   console.log(`Hasil penjumlahan ${num1} dan ${num2} adalah ${result}`);
+// };
+
+// addition(7, 3);
+// addition(5, 11);
+
+// var multiplication = (num1, num2) => {
+//   var result = num1 * num2;
+//   console.log(`${num1} * ${num2} = ${result}`);
+// };
+
+// multiplication(7, 3);
+// multiplication(5, 11);
+
+/* Array Checking */
+// var days = [3, 47, 91];
+
+// var arrChecking = (arr) => {
+// mencari tahu banyaknya data pada array ? length
+// var arrLen = arr.length;
+// menggabungkan setiap data pada array menggunakan coma dan spasi ? join
+// var arrJoin = arr.join(", ");
+// console.log
+// console.log(`Array ini memiliki ${arrLen} data sebagai berikut: ${arrJoin}`);
+// };
+
+// arrChecking(days);
+
+/* Array Caculator */
+
+var numbers = [1, 2, 3];
+
+// array, operation, operand
+// [1, 2, 3], "addition", 10 --> [11, 12, 13]
+
+var arrCalculator = (arr, operation, operand) => {
+  // cari tahu operasi apa yang akan dijalankan
+  switch (operation) {
+    // arr = [1, 2, 3]
+    // operation = "addition"
+    // operand = 10
+    case "addition":
+      var arrResult = [];
+      // lakukan operasi terhadap seluruh data pada array
+      for (var i = 0; i < arr.length; i++) {
+        var result = arr[i] + operand;
+        // setiap hasil dari satu kali pengerjaan operasinya dimasukkan ke dalam array baru (arrResult)
+        arrResult.push(result);
+      }
+
+      // console.log nilai awal dan nilai akhir
+      console.log(`Before : ${arr}\nAfter : ${arrResult}`);
+
+      break;
+  }
 };
 
-fullName("Kyojuro", "Rengoku");
-fullName("Isaac", "Newton");
+arrCalculator(numbers, "addition", 2);
