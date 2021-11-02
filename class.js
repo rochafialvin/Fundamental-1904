@@ -156,49 +156,144 @@
 
 /* Array Caculator */
 
-var numbers = [1, 2, 3];
+// var numbers = [1, 2, 3];
 
 // array, operation, operand
 // [1, 2, 3], "addition", 10 --> [11, 12, 13]
 
-var arrCalculator = (arr, operation, operand) => {
-  var arrResult = [];
-  // cari tahu operasi apa yang akan dijalankan
-  switch (operation) {
-    // arr = [1, 2, 3]
-    // operation = "addition"
-    // operand = 10
-    case "addition":
-      // lakukan operasi terhadap seluruh data pada array
-      for (var i = 0; i < arr.length; i++) {
-        var result = arr[i] + operand;
-        // setiap hasil dari satu kali pengerjaan operasinya dimasukkan ke dalam array baru (arrResult)
-        arrResult.push(result);
-      }
+// var arrCalculator = (arr, operation, operand) => {
+// var arrResult = [];
+// cari tahu operasi apa yang akan dijalankan
+// switch (operation) {
+// arr = [1, 2, 3]
+// operation = "addition"
+// operand = 10
+// case "addition":
+// lakukan operasi terhadap seluruh data pada array
+// for (var i = 0; i < arr.length; i++) {
+// var result = arr[i] + operand;
+// setiap hasil dari satu kali pengerjaan operasinya dimasukkan ke dalam array baru (arrResult)
+// arrResult.push(result);
+// }
 
-      // console.log nilai awal dan nilai akhir
-      console.log(`Before : ${arr}\nAfter : ${arrResult}`);
+// console.log nilai awal dan nilai akhir
+// console.log(`Before : ${arr}\nAfter : ${arrResult}`);
 
-      break;
+// break;
 
-    case "multiplication":
-      // lakukan operasi terhadap seluruh data pada array
-      for (var i = 0; i < arr.length; i++) {
-        var result = arr[i] * operand;
-        // setiap hasil dari satu kali pengerjaan operasinya dimasukkan ke dalam array baru (arrResult)
-        arrResult.push(result);
-      }
+// case "multiplication":
+// lakukan operasi terhadap seluruh data pada array
+// for (var i = 0; i < arr.length; i++) {
+// var result = arr[i] * operand;
+// setiap hasil dari satu kali pengerjaan operasinya dimasukkan ke dalam array baru (arrResult)
+// arrResult.push(result);
+// }
 
-      // console.log nilai awal dan nilai akhir
-      console.log(`Before : ${arr}\nAfter : ${arrResult}`);
+// console.log nilai awal dan nilai akhir
+// console.log(`Before : ${arr}\nAfter : ${arrResult}`);
 
-      break;
+// break;
 
-    default:
-      console.log("Invalid Operation");
+// default:
+// console.log("Invalid Operation");
+// }
+// };
+
+// arrCalculator(numbers, "addition", 2);
+// arrCalculator(numbers, "multiplication", 2);
+// arrCalculator(numbers, "science fiction", 2);
+
+/////////////////////
+/* RETURN (OUTPUT) */
+////////////////////
+
+/* Basic */
+
+// var basic = () => {
+// return "I am the boss";
+// };
+
+// var result = basic();
+// console.log(result);
+
+// running function basic, apapun yang di return dari function basic, akan muncul di console
+// console.log(basic());
+// munculkan isi dari basic ? function
+// console.log(basic);
+
+/* Random 1 - 10 */
+// var oneToTenRandom = () => {
+// Dapatkan nilai random
+// var ran = Math.random();
+// Kalikan dengan 10
+// var ranMultiTen = ran * 10;
+// Hilangkan angka desimal dan tambahkan dengan 1
+// var oneTen = Math.floor(ranMultiTen) + 1;
+// Keluarkan nilainya
+// return oneTen;
+// };
+
+// var result = oneToTenRandom();
+// console.log(result);
+
+///////////////////////////
+/* PARAMETER and RETURN */
+//////////////////////////
+
+// var addition = (num1, num2) => {
+//   return num1 + num2;
+// };
+
+// console.log(addition(7, 9));
+// console.log(addition(1, 1));
+
+// var fullName = (firstName, lastName) => {
+//   return `${firstName} ${lastName}`;
+// };
+
+// console.log(fullName("Robert", "Johnson"));
+
+//////////////////////////
+// PARAMETER x ARGUMENT //
+//////////////////////////
+
+// Parameter adalah 'variable' tempat menyimpan inputan
+// var time = (date, day) => {
+// return `Hari ${day}, tanggal ${date}`;
+// };
+
+// Argument adalah value yang menjadi inputan
+// time(2, "Selasa");
+
+////////////////////////
+/* DEFAULT PARAMETER */
+///////////////////////
+
+/* Parameter yang memiliki nilai awal yang akan digunakan jika tidak menerima argument */
+
+// menerima dua argument, argument pertama adalah value yang akan dipangkatkan, argument kedua adalah value yang akan memangkatkan
+// mereturn hasil pangkatnya
+// jika tidak ada argument kedua, maka nilainya akan dipangkatkan dengan 2
+
+var power = (num1, num2 = 2) => {
+  // num1 = 9
+  // num2 = 3
+
+  // result = 8
+  var result = num1;
+
+  // i = 3
+  for (var i = 1; i < num2; i++) {
+    result = result * num1;
   }
+
+  return [num1, num2, result];
 };
 
-arrCalculator(numbers, "addition", 2);
-arrCalculator(numbers, "multiplication", 2);
-arrCalculator(numbers, "science fiction", 2);
+var resultA = power(2);
+console.log(
+  `Hasil dari pangkat ${resultA[0]} dengan ${resultA[1]} adalah ${resultA[2]}`
+);
+
+var resultB = power(9, 3);
+console.log(`${resultB[0]} pangkat ${resultB[1]} = ${resultB[2]}`);
