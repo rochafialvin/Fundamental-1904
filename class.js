@@ -276,24 +276,27 @@
 // jika tidak ada argument kedua, maka nilainya akan dipangkatkan dengan 2
 
 var power = (num1, num2 = 2) => {
-  // num1 = 9
-  // num2 = 3
+  // num1 = 3
+  // num2 = 2
+  // result = 9
 
-  // result = 8
   var result = num1;
 
-  // i = 3
   for (var i = 1; i < num2; i++) {
     result = result * num1;
   }
 
+  // return [3, 2, 9]
+  // mengeluarkan array
   return [num1, num2, result];
 };
 
-var resultA = power(2);
+// resultA = [3, 2, 9]
+// result menyimpan array yang keluar dari function power
+var resultA = power(3, 2);
 console.log(
   `Hasil dari pangkat ${resultA[0]} dengan ${resultA[1]} adalah ${resultA[2]}`
 );
 
-var resultB = power(9, 3);
-console.log(`${resultB[0]} pangkat ${resultB[1]} = ${resultB[2]}`);
+// var resultB = power(9, 3);
+// console.log(`${resultB[0]} pangkat ${resultB[1]} = ${resultB[2]}`);
