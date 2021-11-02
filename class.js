@@ -49,16 +49,77 @@
 
 /* Hoisted */
 
-leaf();
+// leaf();
 
-function leaf() {
-  console.log(`Hijau Daun`);
-}
+// function leaf() {
+//   console.log(`Hijau Daun`);
+// }
 
 /* Not Hoisted */
 
-leaf();
+// leaf();
 
-var leaf = function () {
-  console.log(`Hijau Daun`);
+// var leaf = function () {
+//   console.log(`Hijau Daun`);
+// };
+
+//////////////////////////
+/* ARROW FUNCTION (ES6) */
+/////////////////////////
+
+// var earth = () => {
+//   console.log("Selamat Bumi");
+// };
+
+// earth();
+
+//////////////////////////////////
+/* WITHOUT PARAMETER AND RETURN */
+//////////////////////////////////
+
+/*
+
+  Parameter = value inputan
+
+  Return = keyword yang berfungsi untuk mengeluarkan value
+  return returnedValue
+
+  var = keyword yang berfungsi untuk mmebuat variabel
+  var namaVariabel
+
+  if = keyword yang berfungsi untuk mengevaluasi suatu kondisi
+  if(conditionValue)
+
+*/
+
+// var fullName = () => {
+//   var firstName = "Isac";
+//   var lastName = "Newton";
+
+//   console.log(`Halo, nama lengkap saya adalah ${firstName} ${lastName}`);
+// };
+
+// var result = fullName();
+// console.log(result);
+
+// var intResult = parseInt("234");
+// console.log(`intResult : ${intResult}`);
+
+////////////////////////
+/* PARAMETER (INPUT) */
+//////////////////////
+
+// kita punya function namanya introduction yang memiliki satu buah parameter namanya firstName
+var introduction = (firstName) => {
+  console.log(`Halo, nama saya adalah ${firstName}`);
 };
+
+// introduction("Miraj");
+// introduction("Khan");
+
+var fullName = (lastName, firstName) => {
+  console.log(`Halo, nama lengkap saya adalah ${firstName} ${lastName}`);
+};
+
+fullName("Kyojuro", "Rengoku");
+fullName("Isaac", "Newton");
