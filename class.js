@@ -24,8 +24,10 @@
 // var i = 0; i < days.length; i++
 // var days = ["senin", "selasa", "rabu", "kamis", "jumat"]; // length = 5 - 1
 // ["senin", "selasa", "rabu"] , length = 3 - 1
+
 // 0, 1, 2,
 // var i = 0; i < days.length; i++
+
 // 2 , 1, 0
 // var i = days.length - 1; i >= 0; i--
 // for (var i = days.length - 1; i >= 0; i--) {
