@@ -110,42 +110,42 @@ let numbers2 = [9, 2, 42, 55, 71, 22, 4,  5,  90, 25, 26]; // --> 351
 // Buat pin
 
 // 92
-// var pin = Math.floor(Math.random() * 10000);
+var pin = Math.floor(Math.random() * 10000);
 
-// // "92"
-// var pinStr = pin.toString();
+// "92"
+var pinStr = pin.toString();
 
-// if (pinStr.length < 4) {
-//   var needDigit = 4 - pinStr.length;
+if (pinStr.length < 4) {
+  var needDigit = 4 - pinStr.length;
 
-//   // i = 3
-//   // neeedDigit = 2
-//   for (var i = 1; i <= needDigit; i++) {
-//     pinStr += "0";
-//   }
-// }
+  // i = 3
+  // neeedDigit = 2
+  for (var i = 1; i <= needDigit; i++) {
+    pinStr += "0";
+  }
+}
 
-// // Loop sebanyak 4 kali
-// for (var i = 1; i <= 4; i++) {
-//   // Minta input user
-//   var inputUser = prompt("Tebak, berapa pinnya ?");
-//   // Banding input user dengan pin
-//   if (inputUser == pinStr) {
-//     // Kalau benar, program berhenti dengan menampilkan informasi
-//     console.log(inputUser);
-//     console.log("That was correct");
-//     break;
-//   } else {
-//     // Kalau salah, tampilkan informasi lalu minta input user lagi hingga 4 kali
-//     console.log(inputUser);
-//     console.log("Sorry that was wrong");
-//   }
+// Loop sebanyak 4 kali
+for (var i = 1; i <= 4; i++) {
+  // Minta input user
+  var inputUser = prompt("Tebak, berapa pinnya ?");
+  // Banding input user dengan pin
+  if (inputUser == pinStr) {
+    // Kalau benar, program berhenti dengan menampilkan informasi
+    console.log(inputUser);
+    console.log("That was correct");
+    break;
+  } else {
+    // Kalau salah, tampilkan informasi lalu minta input user lagi hingga 4 kali
+    console.log(inputUser);
+    console.log("Sorry that was wrong");
+  }
 
-//   // Jika sudah 4 kali loop, maka berhentikan program dan tampilkan jawabannya
-//   if (i == 4) {
-//     console.log(`The answer is ${pinStr}`);
-//   }
-// }
+  // Jika sudah 4 kali loop, maka berhentikan program dan tampilkan jawabannya
+  if (i == 4) {
+    console.log(`The answer is ${pinStr}`);
+  }
+}
 
 // No. 10 //
 
