@@ -1,16 +1,16 @@
 // Hoisting : proses menarik semua statement deklarasi ke bagian paling atas
-console.log(firstName);
-var firstName = "Takemichi";
+// console.log(firstName);
+// var firstName = "Takemichi";
 
-leaf();
-var leaf = function () {
-  console.log("hello");
-};
+// leaf();
+// var leaf = function () {
+//   console.log("hello");
+// };
 
-sayHello();
-function sayHello() {
-  console.log("hello");
-}
+// sayHello();
+// function sayHello() {
+//   console.log("hello");
+// }
 
 ///////////
 
@@ -27,3 +27,16 @@ function sayHello() {
 };
 
 */
+
+var days = ["sun", "mon", "tue"];
+
+var [x, y, z] = ["sun", "mon", "tue"];
+
+// var x = days[0];
+// var y = days[1];
+// var z = days[2];
+
+console.log(x);
+console.log(y);
+console.log(z);
+console.log(a);
