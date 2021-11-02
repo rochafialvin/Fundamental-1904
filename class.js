@@ -1,92 +1,64 @@
-////////////
-// REVIEW //
-////////////
+///////////////
+/* FUNCTION */
+//////////////
 
-// LOOP
-// Mengulang sebuah proses yang sama selama kondisi tertentu masih tepenuhi (true)
+/*
+  Block kode :
+    1. Memiliki nama
+    2. Dapat digunakan secara berulang
+    3. Dapat memiliki input dan output
 
-// init
-// task
-// condition
-// modification
+  Note :
+    1. Input adalah proses dimana kita dapat memberikan value kepada function untuk digunakan.
+    2. Output adalah proses yang dilakukan oleh function dalam menghasilkan value sehingga dapat disimpan di variabel.
+*/
 
-// Untuk menentukan banyaknya loop, cukup ganti angka 6
-// 1 2 3 4 5 6
-// var i = 1 ; i <= 6 ; i++
-// var i = 1 ; i < 7 ; i++
+/* Syntax Function */
 
-// 6 5 4 3 2 1
-// 6 --> 7
-// var i = 6; i >= 1; i--
-// var i = 6; i > 0; i--
+/*
+  keyword 'function' + nama + () + {}
 
-// Ketika berhadapan dengan array
-// var i = 0; i < days.length; i++
-// var days = ["senin", "selasa", "rabu", "kamis", "jumat"]; // length = 5 - 1
-// ["senin", "selasa", "rabu"] , length = 3 - 1
-// 0, 1, 2,
-// var i = 0; i < days.length; i++
-// 2 , 1, 0
-// var i = days.length - 1; i >= 0; i--
-// for (var i = days.length - 1; i >= 0; i--) {
-//   console.log(`Hari : ${days[i]}`);
+  () -> Tempat menulis parameter
+
+  Parameter -> variabel tempat menyimpan input.
+
+  {} -> Tempat menulis task yang akan dikerjakan saat function dijalankan / dipanggil
+
+*/
+
+/* Function Declaration */
+
+// function firstStep() {
+//   var firstName = "Ethan";
+//   console.log(
+//     `Segala sesuatu yang besar, selalu dimulai dari satu langkah kecil. - ${firstName}`
+//   );
 // }
 
-// var full = 5;
+// firstStep();
 
-// i = 6
-// for (var i = 1; i <= 5; i++) {
-//   console.log(`Suap : ${i}`);
-// }
+/* Function Expression */
 
-// Untuk menentukan banyaknya loop, cukup ganti angka 6
-// var i = 1 ; i <= 6 ; i++
+// var keepGoing = function () {
+//   console.log(`Apapun yang terjadi, teruslah melangkah.`);
+// };
 
-///////////
-// ARRAY //
-///////////
+// keepGoing();
 
-// Dapat menyimpan banyak data
-// var colors = ["Red", "Green", "Blue"];
+/* Perbedaan keduanya */
 
-// var things = [
-//   ["green pen", "yellow pen"],
-//   ["whiteboard", "blackboard"],
-//   ["small cup", "medium cup", "large cup"],
-// ];
+/* Hoisted */
 
-// console.log(colors[1]); // Green
-// console.log(things[1]); // ["whiteboard", "blackboard"]
-// x = array, array itu memiliki index
-// x = ["whiteboard", "blackboard"]
-// var x = things[1];
+leaf();
 
-// Menampilkan whiteboard
-// console.log(x[0]);
-// console.log(things[1][0]);
-// console.log(things[2][2]);
-
-// - Clue : variable fruits kini berisi array dua dimensi. Dimana isi dari array tersebut adalah array juga yang setiap arraynya akan menyimpan informasi nama buah, harga satuan buah, dan stock buah yang dimiliki.
-
-var fruits = [
-  ["Apple", 10000, 5],
-  ["Grape", 15000, 7],
-  ["Orange", 20000, 10],
-];
-
-var carts = [];
-
-// Mau beli buah apa ?
-// 0. Apple
-// 1. Grape
-// 2. Orange
-
-var userInput = prompt("Mau beli apa ?");
-console.log(fruits[userInput]);
-
-// qtyOrange = 3
-// fruits[0] = ["JEruk", 15000, 7]
-// fruits[0][2] = 5
-if (qtyOrange > fruits[0][2]) {
-  console.log("Permintaan apple melebihi stock");
+function leaf() {
+  console.log(`Hijau Daun`);
 }
+
+/* Not Hoisted */
+
+leaf();
+
+var leaf = function () {
+  console.log(`Hijau Daun`);
+};
