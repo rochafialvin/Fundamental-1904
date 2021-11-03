@@ -182,5 +182,119 @@
 
 // console.log(arrResult);
 
-var nums = [2, 5, 3, 7];
-var min, max;
+// var numbers = [2];
+// var min, max;
+
+// // min = 2
+// // max = 7
+// numbers.forEach((number, index) => {
+//   // number = 7 ; index = 3
+//   if (index == 0) {
+//     min = max = number;
+//   } else if (number > max) {
+//     max = number;
+//   } else if (number < min) {
+//     min = number;
+//   }
+// });
+
+// console.log(`Min : ${min}, Max: ${max}`);
+
+// Min : 2, Max : 7
+
+///////////////////////////////////////////////////////////////////////
+// Buat sebuah function yang dapat memisahkan nilai genap dan ganjil //
+// data awal = [11, 22, 34, 41, 52, 63, 71, 86,]                     //
+// hasil = [ [11, 41, 63 ,71], [22, 34, 52, 86] ]                    //
+//////////////////////////////////////////////////////////////////////
+
+// var oddEven = (numbers) => {
+//   var odds = [];
+//   var evens = [];
+
+//   numbers.forEach((number) => {
+//     if (number % 2 == 0) {
+//       // Masukkan ke array genap
+//       evens.push(number);
+//     } else {
+//       // Masukkan ke array ganjil
+//       odds.push(number);
+//     }
+//   });
+
+//   return [odds, evens];
+// };
+
+// var result = oddEven([11, 22, 34, 41, 52, 63, 71, 86]);
+// console.log(result);
+
+/////////
+/* MAP */
+/////////
+
+/*
+  1. Callback function harus me-return suatu nilai (tipe data apapun), dimana setiap nilai yang direturn akan masuk ke dalam array baru yang dibuat oleh function map secara internal, bukan karena kita yang menulis kodenya.
+
+  2. Map akan me-return array baru yang sudah berisi nilai yang di return oleh callback function
+*/
+
+/* Multiple by two : For Each */
+// var numbers = [1, 2, 3];
+// var arrResult = [];
+
+// numbers.forEach((number) => {
+//   arrResult.push(number * 2);
+// });
+
+// console.log(`for each : ${arrResult}`);
+
+/* Multiple by two : Map */
+
+// var integers = [1, 2, 3];
+
+// new array = [2, 4, 6]
+// var result = integers.map((integer) => {
+// return integer * 2;
+// });
+
+// console.log(`map : ${result}`);
+
+/* Man or Woman */
+
+/* Mrs. Janette */
+/* Mr. Kim Shin */
+
+// ["Mrs. Janette", "Mr. Kim Shin", "Mr. Tony"]
+
+var persons = [
+  ["Janette", "Woman"],
+  ["Kim Shin", "Man"],
+  ["Tony", "Man"],
+];
+
+// new array (di dalam map) = [`Mrs. Janette`, `Mr. Kim Shin`, `Mr. Tony`]
+var result = persons.map((value) => {
+  // value = ["Tony", "Man"]
+  // value[0] = "Tony"
+  // value[1] = "Man"
+  if (value[1] == "Woman") {
+    //
+    return `Mrs. ${value[0]}`;
+  } else {
+    //
+    return `Mr. ${value[0]}`;
+  }
+});
+
+console.log(result);
+
+//////////////////////////////////////////////////////////////////
+// Sebuah function yang dapat menentukan nilai genap dan ganjil //
+// [1, 2, 3, 4]                                                 //
+// [ [1, "Ganjil"], [2, "Genap"], [3, "Ganjil"], [4, "Genap"] ] //
+//////////////////////////////////////////////////////////////////
+var oddEven = () => {};
+
+var result = oddEven([1, 2, 3]);
+console.log(result);
+// result = [ [1, "Ganjil"], [2, "Genap"], [3, "Ganjil"], [4, "Genap"] ]
