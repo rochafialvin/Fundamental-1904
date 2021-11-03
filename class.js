@@ -329,18 +329,71 @@
   4. Filter akan me-return array baru.
 */
 
-var fruits = [
-  ["Apel Hijau", "segar"],
-  ["Apel Merah", "segar"],
-  ["Apel Coklat", "tidak segar"],
-];
+// var fruits = [
+// ["Apel Hijau", "segar"],
+// ["Apel Merah", "segar"],
+// ["Apel Coklat", "tidak segar"],
+// ];
 
 // new array = [ ["Apel Hijau", "segar"], ["Apel Merah", "segar"] ]
-var arrBaru = fruits.filter((fruit) => {
-  // fruit = ["Apel Coklat", "tidak segar"]
-  // fruit[0] = "Apel Coklat"
-  // fruit[1] = "tidak segar"
-  return fruit[1] == "segar"; // false
-});
+// var arrBaru = fruits.filter((fruit) => {
+// fruit = ["Apel Coklat", "tidak segar"]
+// fruit[0] = "Apel Coklat"
+// fruit[1] = "tidak segar"
+// return fruit[1] == "segar"; // false
+// });
 
-console.log(arrBaru);
+// console.log(arrBaru);
+
+/* Odd Filter */
+
+// var numbers = [1, 2, 3];
+
+// new array = [ 1, 3 ]
+// var result = numbers.filter((number) => {
+// return number % 2 == 1;
+// });
+
+// console.log(result);
+
+/* Character length filter (more than 5 characters) */
+
+// var words = ["Koro Sensei", "Jin Mori", "Eren", "Tanjirou", "Zorro"];
+
+// new array = [ "Koro Sensei", "Jin Mori", "Tanjirou"  ]
+// var result = words.filter((word) => {
+// word = "Zorro"
+// return word.length > 5;
+// });
+
+// console.log(result);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Buat function yang akan memfilter seseorang yang memiliki umur lebih dari 30 atau tinggal di Jakarta //
+// [                                                                                                    //
+//   ["John", 43, "Jakarta"],                                                                           //
+//   ["Baby", 21, "Jakarta"],                                                                           //
+//   ["Tony", 34, "Surabaya"],                                                                          //
+//   ["Justin", 29, "Banjarmasin"],                                                                     //
+// ];                                                                                                   //
+//                                                                                                      //
+// [                                                                                                    //
+//   ["John", 43, "Jakarta"],                                                                           //
+//   ["Baby", 21, "Jakarta"],                                                                           //
+//   ["Tony", 34, "Surabaya"],                                                                          //
+// ];                                                                                                   //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var persons = [
+  ["John", 43, "Jakarta"],
+  ["Baby", 21, "Jakarta"],
+  ["Tony", 34, "Surabaya"],
+  ["Justin", 29, "Banjarmasin"],
+];
+
+var ageAddressFilter = () => {
+  // Isi jawaban anda disini
+};
+
+var result = ageAddress(persons);
+console.table(result);
