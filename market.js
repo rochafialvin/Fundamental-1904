@@ -111,9 +111,9 @@ while (showMenu) {
         var selectedIndex = parseInt(prompt(fruitList));
 
         // var [selName, selPrice, selStock] = ["Grape", 15000, 7]
-        // selName = "Grape"
-        // selPrice = 15000
-        // selStock = 7
+        // selectedName = "Grape"
+        // selectedPrice = 15000
+        // selectedStock = 7
         var [selectedName, selectedPrice, selectedStock] =
           fruits[selectedIndex];
 
@@ -133,9 +133,10 @@ while (showMenu) {
             );
           } else {
             // Jika tidak melebihi stock, masukan buah yang terpilih ke dalam keranjang
+            // cart.push(["Grape", 15000, 5]);
             cart.push([selectedName, selectedPrice, selectedQty]);
             // Kurangi stock buah yang dimasukkan ke keranjang
-            // ["Grape", 15000, 4]
+            // ["Grape", 15000, 2]
             fruits[selectedIndex][2] -= selectedQty;
             break;
           }
@@ -148,16 +149,59 @@ while (showMenu) {
           cartList += `${i}. ${cart[i][0]} || Rp.${cart[i][1]} || qty: ${cart[i][2]}\n`;
         }
 
-        // yes -> true, cancel -> false
+        cartList += "\nApakah ingin belanja lainnya ?";
+
+        // OK -> true
+        // Cancel -> false
         isShoping = confirm(cartList);
-
-        // hitung
-
-        // bayar
       }
-      break;
-      // Jika iya, tampilkan kembali list buahnya
-      // Jika tidak, hitung belanjaan
+
+      /*
+        cart = [
+          ["Grape", 15000, 5, 75000],
+          ["Apple", 10000, 1, 10000],
+        ]
+      
+      */
+      // hitung
+      // i = 1
+      // cart.length = 2
+      var finalPrice = 0; // 85000
+      for (var i = 0; i < cart.length; i++) {
+        // cart[1] = ["Apple", 10000, 1, 10000]
+        cart[i][3] = cart[i][1] * cart[i][2];
+        finalPrice += cart[i][3];
+      }
+
+      var finalReport = "";
+
+      // Grape : 15000 * 2 = 30000
+      for (var i = 0; i < cart.length; i++) {
+        finalReport += `${cart[i][0]} : ${cart[i][1]} * ${cart[i][2]} = ${cart[i][3]}\n`;
+      }
+
+      while (true) {
+        var money = parseInt(
+          prompt(`Detail Belanja\n\n${finalReport}\nTotal : ${finalPrice}`)
+        );
+
+        var margin = Math.abs(money - finalPrice);
+
+        if (money < finalPrice) {
+          alert(
+            `Uang yang Anda masukkan masih kurang ${margin}, total belanja ${finalPrice}`
+          );
+        } else {
+          if (money > finalPrice) {
+            alert(`Terimakasih, uang kembalian Anda ${margin}`);
+          } else {
+            alert(`Terimakasih`);
+          }
+          break;
+        }
+      }
+
+      cart = [];
       break;
 
     case 5:
@@ -165,78 +209,3 @@ while (showMenu) {
       break;
   }
 }
-
-// do {
-//   // Meminta input user
-
-//   var qtyApple = prompt(`Masukan jumlah qty Apel ( stock : ${stockApple} )`);
-
-//   if (qtyApple > stockApple) {
-//     // Menampilkan informasi bahwa qty melebihi stock
-//     alert(`Permintaan melebihi stock, stock : ${stockApple}`);
-//   } else {
-//     // keluar dari loop
-//     break;
-//   }
-// } while (true);
-
-// while (true) {
-//   // stockGrape = 7
-//   // qtyGrape = 5
-//   var qtyGrape = prompt(`Masukan jumlah qty Anggur ( stock : ${stockGrape} ) `);
-//   if (qtyGrape > stockGrape) {
-//     // Menampilkan informasi bahwa qty melebihi stock
-//     alert(`Permintaan melebihi stock, stock : ${stockGrape}`);
-//   } else {
-//     // keluar dari loop
-//     break;
-//   }
-// }
-
-// while (true) {
-//   // stockOrange = 9
-//   // qtyOrange = 10
-//   var qtyOrange = prompt(`Masukan jumlah qty Jeruk ( stock : ${stockOrange} )`);
-//   if (qtyOrange <= stockOrange) break;
-//   alert(`Permintaan melebihi stock, stock : ${stockOrange}`);
-// }
-
-// // Hitung total harga dari masing - masing buah
-// var totalPriceApple = qtyApple * priceApple;
-// var totalPriceGrape = qtyGrape * priceGrape;
-// var totalPriceOrange = qtyOrange * priceOrange;
-
-// // Total harga keseluruhan
-// var finalPrice = totalPriceApple + totalPriceGrape + totalPriceOrange;
-
-// // Susun teks yang akan di tampilkan
-// var detailInformation = `
-//   Detail Belanja
-
-//   Apel : ${qtyApple} x ${priceApple} = ${totalPriceApple}
-//   Grape : ${qtyGrape} x ${priceGrape} = ${totalPriceGrape}
-//   Orange : ${qtyOrange} x ${priceOrange} = ${totalPriceOrange}
-
-//   Total : ${finalPrice}
-// `;
-
-// while (true) {
-//   // Tampilkan informasi pada alert
-//   var money = parseInt(prompt(detailInformation));
-//   // Mencari margin antara total yang harus dibayar dengan input dari user
-//   var margin = Math.abs(money - finalPrice);
-
-//   if (money < finalPrice) {
-//     alert(`Uang yang Anda masukkan kurang ${margin}`);
-//   } else {
-//     if (money > finalPrice) {
-//       // Jika uangnya lebih
-//       alert(`Terimakasih, Uang kembali untuk Anda ${margin}`);
-//     } else {
-//       // Jika uang yang diberikan memiliki jumlah yang pas dari seharusnya
-//       alert("Terimakasih !");
-//     }
-
-//     break;
-//   }
-// }
