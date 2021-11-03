@@ -384,16 +384,54 @@
 // ];                                                                                                   //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var persons = [
-  ["John", 43, "Jakarta"],
-  ["Baby", 21, "Jakarta"],
-  ["Tony", 34, "Surabaya"],
-  ["Justin", 29, "Banjarmasin"],
-];
+// var persons = [
+//   ["John", 43, "Jakarta"],
+//   ["Baby", 21, "Jakarta"],
+//   ["Tony", 34, "Surabaya"],
+//   ["Justin", 29, "Banjarmasin"],
+// ];
 
-var ageAddressFilter = () => {
-  // Isi jawaban anda disini
-};
+// var ageAddressFilter = (arr) => {
+//   // array new = [ ["John", 43, "Jakarta"], ["Baby", 21, "Jakarta"], ["Tony", 34, "Surabaya"]  ]
+//   return arr.filter((value) => {
+//     // value = ["Justin", 29, "Banjarmasin"]
+//     // value[1] = 29
+//     // value[2] = "Banjarmasin"
 
-var result = ageAddress(persons);
-console.table(result);
+//     // false || false --> false
+//     return value[1] > 30 || value[2] == "Jakarta";
+//   });
+// };
+
+// var result = ageAddressFilter(persons);
+// console.table(result);
+
+//////////////////
+/* MAP ODD EVEN */
+//////////////////
+
+var numbers = [22, 17, 19, 20, 14];
+// result : [ 'genap', 'ganjil', 'ganjil', 'genap', 'genap' ]
+
+////////////////
+/* FILTER FEE */
+////////////////
+
+/*
+  Nilai gaji lebih dari 9jt setelah dikurang 5% dari total gaji
+*/
+
+var salaries = [9100000, 9800000, 9500000, 10300000, 9300000];
+// result : [ 9800000, 9500000, 10300000 ]
+
+///////////////
+/* FIBONACCI */
+///////////////
+
+// Recursive function
+
+var numbers = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+var fibonacci = (p) => {};
+
+fibonacci(5); // return 3
+fibonacci(8); // return 13
