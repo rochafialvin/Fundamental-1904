@@ -232,6 +232,8 @@
 /* MAP */
 /////////
 
+// jumlah data di array baru akan sama, bentuknya akan berbeda
+
 /*
   1. Callback function harus me-return suatu nilai (tipe data apapun), dimana setiap nilai yang direturn akan masuk ke dalam array baru yang dibuat oleh function map secara internal, bukan karena kita yang menulis kodenya.
 
@@ -266,35 +268,79 @@
 
 // ["Mrs. Janette", "Mr. Kim Shin", "Mr. Tony"]
 
-var persons = [
-  ["Janette", "Woman"],
-  ["Kim Shin", "Man"],
-  ["Tony", "Man"],
-];
+// var persons = [
+//   ["Janette", "Woman"],
+//   ["Kim Shin", "Man"],
+//   ["Tony", "Man"],
+// ];
 
-// new array (di dalam map) = [`Mrs. Janette`, `Mr. Kim Shin`, `Mr. Tony`]
-var result = persons.map((value) => {
-  // value = ["Tony", "Man"]
-  // value[0] = "Tony"
-  // value[1] = "Man"
-  if (value[1] == "Woman") {
-    //
-    return `Mrs. ${value[0]}`;
-  } else {
-    //
-    return `Mr. ${value[0]}`;
-  }
-});
+// // new array (di dalam map) = [`Mrs. Janette`, `Mr. Kim Shin`, `Mr. Tony`]
+// var result = persons.map((value) => {
+//   // value = ["Tony", "Man"]
+//   // value[0] = "Tony"
+//   // value[1] = "Man"
+//   if (value[1] == "Woman") {
+//     //
+//     return `Mrs. ${value[0]}`;
+//   } else {
+//     //
+//     return `Mr. ${value[0]}`;
+//   }
+// });
 
-console.log(result);
+// console.log(result);
 
 //////////////////////////////////////////////////////////////////
 // Sebuah function yang dapat menentukan nilai genap dan ganjil //
 // [1, 2, 3, 4]                                                 //
 // [ [1, "Ganjil"], [2, "Genap"], [3, "Ganjil"], [4, "Genap"] ] //
 //////////////////////////////////////////////////////////////////
-var oddEven = () => {};
+// var oddEven = (numbers) => {
+//   // numbers = [1, 2, 3]
+//   // new array = [ [1, "Ganjil"], [2, "Genap"], [3, "Ganjil"] ]
 
-var result = oddEven([1, 2, 3]);
-console.log(result);
-// result = [ [1, "Ganjil"], [2, "Genap"], [3, "Ganjil"], [4, "Genap"] ]
+//   // result = [ [1, "Ganjil"], [2, "Genap"], [3, "Ganjil"] ]
+//   var result = numbers.map((number) => {
+//     if (number % 2 == 0) {
+//       return [number, "Genap"];
+//     } else {
+//       return [number, "Ganjil"];
+//     }
+//   });
+
+//   return result;
+// };
+
+// var result = oddEven([1, 2, 3]);
+// console.log(result);
+// result = [ [1, "Ganjil"], [2, "Genap"], [3, "Ganjil"] ]
+
+////////////
+/* FILTER */
+///////////
+
+/*
+  1. Callback function harus me-return suatu boolean.
+
+  2. Callback me-return true : value yang sedang diproses akan disimpan ke array baru.
+
+  3. Callback me-return false : value yang sedang diproses akan diabaikan.
+
+  4. Filter akan me-return array baru.
+*/
+
+var fruits = [
+  ["Apel Hijau", "segar"],
+  ["Apel Merah", "segar"],
+  ["Apel Coklat", "tidak segar"],
+];
+
+// new array = [ ["Apel Hijau", "segar"], ["Apel Merah", "segar"] ]
+var arrBaru = fruits.filter((fruit) => {
+  // fruit = ["Apel Coklat", "tidak segar"]
+  // fruit[0] = "Apel Coklat"
+  // fruit[1] = "tidak segar"
+  return fruit[1] == "segar"; // false
+});
+
+console.log(arrBaru);
