@@ -410,8 +410,17 @@
 /* MAP ODD EVEN */
 //////////////////
 
-var numbers = [22, 17, 19, 20, 14];
+// var numbers = [21, 17, 19];
 // result : [ 'genap', 'ganjil', 'ganjil', 'genap', 'genap' ]
+// var result = numbers.map((number) => {
+//   if (number % 2 == 1) {
+//     return "ganjil";
+//   } else {
+//     return "genap";
+//   }
+// });
+
+// console.log(result);
 
 ////////////////
 /* FILTER FEE */
@@ -421,17 +430,154 @@ var numbers = [22, 17, 19, 20, 14];
   Nilai gaji lebih dari 9jt setelah dikurang 5% dari total gaji
 */
 
-var salaries = [9100000, 9800000, 9500000, 10300000, 9300000];
+// var salaries = [9100000, 9800000, 9500000, 10300000, 9300000];
 // result : [ 9800000, 9500000, 10300000 ]
+
+// var result = salaries.filter((salary) => {
+// return salary - salary * 0.05 > 9000000;
+// });-
+
+// console.log(result);
 
 ///////////////
 /* FIBONACCI */
 ///////////////
 
-// Recursive function
+// var numbers = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 
-var numbers = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-var fibonacci = (p) => {};
+// var fibonacci = (p) => {
+//   // p = 5
+//   // i = 5
+//   var fiboSeq = [0, 1]; // [0, 1, 1, 2, 3, 5, 8]
+//   for (var i = 0; i < p; i++) {
+//     // 3 + 5 --> 8
+//     fiboSeq.push(fiboSeq[i] + fiboSeq[i + 1]);
+//   }
 
-fibonacci(5); // return 3
-fibonacci(8); // return 13
+//   console.log(fiboSeq[p - 1]);
+// };
+
+// fibonacci(5); // return 3
+// // fibonacci(8); // return 13
+
+// var fibonacci = (p) => {
+// p = 5
+// i = 3
+// var fiboSeq = [0, 1]; // [0, 1, 1, 2, 3]
+// for (var i = 0; i < p - 2; i++) {
+// 1 + 2 -> 3
+// fiboSeq.push(fiboSeq[i] + fiboSeq[i + 1]);
+// }
+
+// [0, 1, 1,]
+// index terakhir = 2
+// length = 3 - 1 = 2
+// console.log(fiboSeq[fiboSeq.length - 1]);
+// };
+
+// fibonacci(8); // return 3
+
+// [1, 1, 2, 3, 5,]
+// const fibonacci = (p) => {
+// if (p < 3) {
+// return 1;
+// } else {
+// fib(3)                     + fib(2)
+// fib(2) + fib(1)            + 1
+// 1      + 1                 + 1
+// return fibonacci(p - 1) + fibonacci(p - 2);
+// }
+// };
+
+// var fibResult = fibonacci(4);
+// console.log(fibResult);
+
+///////////////////////////////////////
+// SORT DESCENDING ( 9 - 0 ) ( z - a )
+///////////////////////////////////////
+
+// var names = ["Alex", "Elena", "Chaplin", "Bernard", "Dany"];
+// [ 'Elena', 'Dany', 'Chaplin', 'Bernard', 'Alex' ]
+
+// [ 'Alex', 'Bernard', 'Chaplin', 'Dany', 'Elena' ]
+// names.sort();
+
+// names.reverse();
+
+// console.log(names);
+
+// Reverse tanpa menggunakan method reverse
+// var names = ["Alex", "Elena", "Chaplin", "Bernard", "Dany"];
+// var result = [];
+
+// for (var i = names.length - 1; i >= 0; i--) {
+//   result.push(names[i]);
+// }
+
+// console.log(result);
+
+/////////////////////
+/* SORT (Advanced) */
+/////////////////////
+
+/*
+  1. Callback function memiliki dua parameter
+
+  2. Callback function harus me-return nilai dari salah satu kondisi
+
+      a. return < 0 , a akan berada didepan b
+
+      b. return 0 , posisi a dan b tidak berubah
+
+      c. return > 0 , b akan berada didepan a
+*/
+
+/* Numbers */
+
+// [47, 23, 13 ]
+var numbers = [23, 47, 13, 3, 9, 240];
+
+var asc = (a, b) => {
+  return a - b;
+};
+
+var dsc = (a, b) => {
+  return b - a;
+};
+
+numbers.sort(dsc);
+
+console.log(numbers);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Buat function yang akan mensorting array 2 dimensi ini berdasarkan nama, dan umur (ascending) //
+// var persons = [                                                                               //
+//     ['John', 44],                                                                             //
+//     ['John', 43],                                                                             //
+//     ['Baby', 21],                                                                             //
+//     ['Justin', 29]                                                                            //
+// ]                                                                                             //
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+var persons = [
+  ["John", 44],
+  ["John", 43],
+  ["Baby", 21],
+  ["Justin", 29],
+];
+
+// 65 > 66 : false
+console.log("A" > "B");
+
+// 65 > 97 : false
+console.log("A" > "a");
+
+// A : 65 < a : 97 : true
+console.log("Alvin" < "alvin");
+
+// l : 108 < b : 98 : false
+console.log("Alvin" < "Abed");
+
+persons.sort((a, b) => {
+  // isi jawaban teman - teman
+});
