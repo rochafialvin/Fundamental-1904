@@ -107,3 +107,21 @@
 // const filterGenap = number => number % 2 == 0;
 
 // console.log(numbers.filter(filterGenap));
+
+////////////////////
+// MAP DUPLICATE //
+///////////////////
+
+const mapDuplicate = (arr, cb) => {
+  // Isi jawaban teman - teman disini
+  return [];
+};
+
+//////////////////////
+// FILTER DUPLICATE //
+/////////////////////
+
+const filterDuplicate = (arr, cb) => {
+  // Isi jawaban teman - teman disini
+  return [];
+};
