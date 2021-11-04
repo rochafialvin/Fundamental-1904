@@ -1,22 +1,15 @@
 /////////////////
-// MARKET V.1.4
+// MARKET V.1.5
 /////////////////
 
 /*
 
-    1. Hanya boleh ada satu block while untuk input qty semua produk.
-    2. Gunakan for loop untuk menghitung total harga setiap barang dan total harga keseluruhan
-    3. Terdapat menu tambahan, total semua menu yang dimiliki antara lain :
-        1. Menampilkan buah
-        2. Menambah buah
-        3. Menghapus buah
-        4. Membeli buah
-        5. Exit
-    4. Tampilkan daftar buah setiap selesai proses menambah dan menghapus buah
-    5. User kini bisa memilih buah apa yang ingin dibeli, tidak harus beli semua.
-    6. Setiap user sudah menentukan qty dari suatu produk, masukkan produk tersebut ke keranjang
-    7. Tampilkan isi keranjang setiap selesai memilih satu produk untuk dibeli, dibarengi pertanyaan apakah akan lanjut belanja atau tidak.
-    8. Kosongkan array setelah selesai melakukan pembayaran
+  - Ubah loop yang menggunakan for loop menjadi for each
+    - Membuat list / daftar buah
+    - Meminta jumlah qty untuk setiap produk
+    - Menghitung total harga
+    - Membuat detail belanja
+  - Membuat sebuah function untuk membuat list produk
 
 */
 // [name, price, stock]
@@ -28,6 +21,17 @@ var fruits = [
 
 // [name, price, qty]
 var cart = [];
+
+// Function untuk menampilkan list buah
+const createList = (arr, header, info = "stock") => {
+  let list = `${header}\n\n`;
+
+  for (var i = 0; i < arr.length; i++) {
+    list += `${i}. ${arr[i][0]} || Rp.${arr[i][1]} || ${info}: ${arr[i][2]}\n`;
+  }
+
+  return list;
+};
 
 var showMenu = true;
 while (showMenu) {
@@ -44,13 +48,7 @@ while (showMenu) {
 
   switch (menu) {
     case 1:
-      var fruitList = `Daftar buah\n\n`;
-
-      for (var i = 0; i < fruits.length; i++) {
-        fruitList += `${i}. ${fruits[i][0]} || Rp.${fruits[i][1]} || stock: ${fruits[i][2]}\n`;
-      }
-
-      alert(fruitList);
+      alert(createList(fruits, "Daftar buah"));
       break;
     case 2:
       // Minta input data buah baru (nama, harga satuan, stock)
@@ -64,23 +62,11 @@ while (showMenu) {
       // Masukkan array baru ke dalam array fruits
       fruits.push(newFruit);
 
-      var fruitList = `Daftar buah\n\n`;
-
-      for (var i = 0; i < fruits.length; i++) {
-        fruitList += `${i}. ${fruits[i][0]} || Rp.${fruits[i][1]} || stock: ${fruits[i][2]}\n`;
-      }
-
-      alert(fruitList);
+      alert(createList(fruits, "Daftar buah"));
       break;
 
     case 3:
-      // Create daftar buah
-      var fruitList = `Menghapus buah\n\n`;
-
-      for (var i = 0; i < fruits.length; i++) {
-        fruitList += `${i}. ${fruits[i][0]} || Rp.${fruits[i][1]} || stock: ${fruits[i][2]}\n`;
-      }
-
+      const fruitList = createList(fruits, "Menghapus buah");
       // selectedIndex = 0 (Apple)
       var selectedIndex = parseInt(prompt(fruitList));
 
@@ -88,24 +74,14 @@ while (showMenu) {
       // index dari buah terpilih akan disimpan ke variable selIndex
       fruits.splice(selectedIndex, 1);
 
-      var fruitList = `Daftar buah\n\n`;
-
-      for (var i = 0; i < fruits.length; i++) {
-        fruitList += `${i}. ${fruits[i][0]} || Rp.${fruits[i][1]} || stock: ${fruits[i][2]}\n`;
-      }
-
-      alert(fruitList);
+      alert(createList(fruits, "Daftar buah"));
       break;
 
     case 4:
       var isShoping = true;
       while (isShoping) {
         // Tampilkan daftar buah dan minta user untuk memilih
-        var fruitList = `Membeli buah\n\n`;
-
-        for (var i = 0; i < fruits.length; i++) {
-          fruitList += `${i}. ${fruits[i][0]} || Rp.${fruits[i][1]} || stock: ${fruits[i][2]}\n`;
-        }
+        const fruitList = createList(fruits, "Membeli buah");
 
         // 1 --> Grape
         var selectedIndex = parseInt(prompt(fruitList));
@@ -143,11 +119,8 @@ while (showMenu) {
         }
 
         // Tampilkan isi keranjang dan tanyakan user apakah ingin beli buah lainnya ?
-        var cartList = `Keranjang\n\n`;
 
-        for (var i = 0; i < cart.length; i++) {
-          cartList += `${i}. ${cart[i][0]} || Rp.${cart[i][1]} || qty: ${cart[i][2]}\n`;
-        }
+        var cartList = createList(cart, "Keranjang", "qty");
 
         cartList += "\nApakah ingin belanja lainnya ?";
 
@@ -156,29 +129,19 @@ while (showMenu) {
         isShoping = confirm(cartList);
       }
 
-      /*
-        cart = [
-          ["Grape", 15000, 5, 75000],
-          ["Apple", 10000, 1, 10000],
-        ]
-      
-      */
-      // hitung
-      // i = 1
-      // cart.length = 2
-      var finalPrice = 0; // 85000
-      for (var i = 0; i < cart.length; i++) {
-        // cart[1] = ["Apple", 10000, 1, 10000]
-        cart[i][3] = cart[i][1] * cart[i][2];
-        finalPrice += cart[i][3];
-      }
+      var finalPrice = 0;
+      cart.forEach((val) => {
+        // val = ["Grape", 15000, 5]
+        val[3] = val[1] * val[2];
+        finalPrice += val[3];
+      });
 
       var finalReport = "";
 
       // Grape : 15000 * 2 = 30000
-      for (var i = 0; i < cart.length; i++) {
-        finalReport += `${cart[i][0]} : ${cart[i][1]} * ${cart[i][2]} = ${cart[i][3]}\n`;
-      }
+      cart.forEach((val) => {
+        finalReport += `${val[0]} : ${val[1]} * ${val[2]} = ${val[3]}\n`;
+      });
 
       while (true) {
         var money = parseInt(
