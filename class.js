@@ -680,7 +680,7 @@
 // fun();
 
 /*
-  LET
+  CONST
 
   1. Function scope : Saat dibuat didalam function, maka hanya dapat diakses dari dalam function itu saja.
   2. Block scope : Saat dibuat didalam kurung kurawal (if , switch, for, while, do while)
@@ -692,28 +692,28 @@
 
 // DEFINE
 
-const firstName = "Christopher";
-firstName = "Orochimaru";
-console.log(firstName);
+// const firstName = "Christopher";
+// firstName = "Orochimaru";
+// console.log(firstName);
 
 // ACCESS
 
-if (true) {
-  console.log(firstName);
-}
+// if (true) {
+//   console.log(firstName);
+// }
 
-do {
-  console.log(firstName);
-} while (false);
+// do {
+//   console.log(firstName);
+// } while (false);
 
-switch (true) {
-  case true:
-    console.log(firstName);
-    break;
-}
+// switch (true) {
+//   case true:
+//     console.log(firstName);
+//     break;
+// }
 
-var fun = () => {
-  console.log(firstName);
-};
+// var fun = () => {
+//   console.log(firstName);
+// };
 
-fun();
+// fun();
