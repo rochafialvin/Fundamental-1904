@@ -534,20 +534,23 @@
 
 /* Numbers */
 
-// [47, 23, 13 ]
-var numbers = [23, 47, 13, 3, 9, 240];
+// [47, 23]
+// var numbers = [23, 47, 13, 3, 9, 240];
 
-var asc = (a, b) => {
-  return a - b;
-};
+// var asc = (a, b) => {
+//   return a - b;
+// };
 
-var dsc = (a, b) => {
-  return b - a;
-};
+// var dsc = (a, b) => {
+// a = 47
+// b = 23
+// negatif
+//   return b - a;
+// };
 
-numbers.sort(dsc);
+// numbers.sort(dsc);
 
-console.log(numbers);
+// console.log(numbers);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Buat function yang akan mensorting array 2 dimensi ini berdasarkan nama, dan umur (ascending) //
@@ -559,25 +562,158 @@ console.log(numbers);
 // ]                                                                                             //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var persons = [
-  ["John", 44],
-  ["John", 43],
-  ["Baby", 21],
-  ["Justin", 29],
-];
+// var persons = [
+// ["John", 44], // 3
+// ["John", 43], // 2
+// ["Baby", 21], // 1
+// ["Justin", 29], // 4
+// ];
 
-// 65 > 66 : false
-console.log("A" > "B");
+// A = 65
+// B = 66
+// "A" > "B";
 
-// 65 > 97 : false
-console.log("A" > "a");
+// var personSort = (arr) => {
+// arr.sort((a, b) => {
+// a = ["John", 44]
+// b = ["John", 43]
+// a -> b
+// Baby -> John
+// if (a[0] > b[0]) {
+// return 1;
+// } else if (a[0] < b[0]) {
+// return -1;
+// } else {
+// 44 - 43 --> 1 (positif)
+//       return a[1] - b[1];
+//     }
+//   });
 
-// A : 65 < a : 97 : true
-console.log("Alvin" < "alvin");
+//   return arr;
+// };
 
-// l : 108 < b : 98 : false
-console.log("Alvin" < "Abed");
+// var result = personSort(persons);
+// console.table(result);
 
-persons.sort((a, b) => {
-  // isi jawaban teman - teman
-});
+////////////////////
+/* VARIABLE SCOPE */
+////////////////////
+
+/*
+  Variable Scope : Cakupan wilayah yang dimiliki oleh variabel
+
+  Global scope : Dapat diakses dari manapun
+  Local scope : Memiliki ruang terbatas untuk diakses (function scope dan block scope)
+*/
+
+/*
+  VAR
+
+  1. Function scope : Saat dibuat didalam function, maka hanya dapat diakses dari dalam function itu saja.
+*/
+
+// // DEFINE
+// var iron = () => {
+//   var firstName = "Christopher";
+// };
+
+// // ACCESS
+// console.log(firstName);
+
+// if (true) {
+//   console.log(firstName);
+// }
+
+// do {
+//   console.log(firstName);
+// } while (false);
+
+// switch (true) {
+//   case true:
+//     console.log(firstName);
+//     break;
+// }
+
+// var fun = () => {
+//   console.log(firstName);
+// };
+
+// fun();
+
+/*
+  LET
+
+  1. Function scope : Saat dibuat didalam function, maka hanya dapat diakses dari dalam function itu saja.
+  2. Block scope : Saat dibuat didalam kurung kurawal (if , switch, for, while, do while)
+
+  Note :
+    - Tidak dapat melakukan deklarasi ulang pada scope yang sama
+
+*/
+
+// DEFINE
+// do {
+//   let firstName = "Christopher";
+// } while (false);
+
+// ACCESS
+// console.log(firstName);
+
+// if (true) {
+//   console.log(firstName);
+// }
+
+// do {
+//   console.log(firstName);
+// } while (false);
+
+// switch (true) {
+//   case true:
+//     console.log(firstName);
+//     break;
+// }
+
+// var fun = () => {
+//   console.log(firstName);
+// };
+
+// fun();
+
+/*
+  LET
+
+  1. Function scope : Saat dibuat didalam function, maka hanya dapat diakses dari dalam function itu saja.
+  2. Block scope : Saat dibuat didalam kurung kurawal (if , switch, for, while, do while)
+
+  Note :
+    - Tidak dapat melakukan deklarasi ulang pada scope yang sama
+    - Nilai yang disimpan tidak dapat diubah
+*/
+
+// DEFINE
+
+const firstName = "Christopher";
+firstName = "Orochimaru";
+console.log(firstName);
+
+// ACCESS
+
+if (true) {
+  console.log(firstName);
+}
+
+do {
+  console.log(firstName);
+} while (false);
+
+switch (true) {
+  case true:
+    console.log(firstName);
+    break;
+}
+
+var fun = () => {
+  console.log(firstName);
+};
+
+fun();
