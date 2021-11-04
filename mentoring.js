@@ -111,17 +111,39 @@
 ////////////////////
 // MAP DUPLICATE //
 ///////////////////
+const numbers = [1, 2, 3];
+const multiple = (number) => {
+  return number * 2;
+};
 
 const mapDuplicate = (arr, cb) => {
-  // Isi jawaban teman - teman disini
-  return [];
+  // arr = [1, 2, 3]
+  // cb = (number) => {
+  //   return number * 2;
+  // };
+
+  const newArray = []; // [2, 4, 6]
+
+  arr.forEach((element) => {
+    // element = 3
+
+    newArray.push(cb(element));
+  });
+
+  return newArray;
 };
+
+// const resultMap = numbers.map(multiple);
+const resultMapDuplicate = mapDuplicate(numbers, multiple);
+
+// console.log("resultMap", resultMap);
+console.log("resultMapDuplicate", resultMapDuplicate);
 
 //////////////////////
 // FILTER DUPLICATE //
 /////////////////////
 
-const filterDuplicate = (arr, cb) => {
-  // Isi jawaban teman - teman disini
-  return [];
-};
+// const filterDuplicate = (arr, cb) => {
+//   // Isi jawaban teman - teman disini
+//   return [];
+// };
