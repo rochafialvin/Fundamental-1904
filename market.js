@@ -12,11 +12,13 @@
   - Membuat sebuah function untuk membuat list produk
 
 */
+
 // [name, price, stock]
-var fruits = [
-  ["Apple", 10000, 5],
-  ["Grape", 15000, 7],
-  ["Orange", 20000, 8],
+const products = [
+  { category: 1, name: "Noodle", price: 20000, stock: 8, expired: 2020 },
+  { category: 2, name: "Hoodie", price: 15000, stock: 7, size: "L" },
+  { category: 3, name: "Headphone", price: 20000, stock: 8, warranty: "Yes" },
+  { category: 4, name: "Apel", price: 10000, stock: 5, sugar: "High" },
 ];
 
 // [name, price, qty]

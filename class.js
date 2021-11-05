@@ -150,53 +150,53 @@
 /* INHERITANCE */
 ////////////////
 
-// class Player {
-//   constructor(name, nickname, nationality) {
-//     this.name = name;
-//     this.nickname = nickname;
-//     this.nationality = nationality;
-//   }
+class Player {
+  constructor(name, nickname, nationality) {
+    this.name = name;
+    this.nickname = nickname;
+    this.nationality = nationality;
+  }
 
-//   intro() {
-//     console.log(`My name is ${this.name} but you can call me ${this.nickname}`);
-//   }
-// }
+  intro() {
+    console.log(`My name is ${this.name} but you can call me ${this.nickname}`);
+  }
+}
 
-// class CasualPlayer extends Player {
-//   constructor(name, nickname, nationality, job) {
-//     super(name, nickname, nationality);
-//     this.job = job;
-//   }
+class CasualPlayer extends Player {
+  constructor(name, nickname, nationality, job) {
+    super(name, nickname, nationality);
+    this.job = job;
+  }
 
-//   myJob() {
-//     console.log(`I'm not pro player so i have a job, that is ${this.job}`);
-//   }
-// }
+  myJob() {
+    console.log(`I'm not pro player so i have a job, that is ${this.job}`);
+  }
+}
 
-// const alvin = new CasualPlayer(
-//   "Alvin Rochafi",
-//   "rochafi",
-//   "Indonesia",
-//   "Lecturer"
-// );
+const alvin = new CasualPlayer(
+  "Alvin Rochafi",
+  "rochafi",
+  "Indonesia",
+  "Lecturer"
+);
 
-// alvin.intro();
-// alvin.myJob();
+alvin.intro();
+alvin.myJob();
 
-// class ProPlayer extends Player {
-//   constructor(name, nickname, nationality, team) {
-//     super(name, nickname, nationality);
-//     this.team = team;
-//   }
+class ProPlayer extends Player {
+  constructor(name, nickname, nationality, team) {
+    super(name, nickname, nationality);
+    this.team = team;
+  }
 
-//   myTeam() {
-//     console.log(`I'm a pro player so i have a team, that is ${this.team}`);
-//   }
-// }
+  myTeam() {
+    console.log(`I'm a pro player so i have a team, that is ${this.team}`);
+  }
+}
 
-// const tanjirou = new ProPlayer("Tanjirou", "Tanji", "Japan", "A");
-// tanjirou.intro();
-// tanjirou.myTeam();
+const tanjirou = new ProPlayer("Tanjirou", "Tanji", "Japan", "A");
+tanjirou.intro();
+tanjirou.myTeam();
 
 /////////////////////////////////
 /* Object For Every Data Types */
@@ -223,8 +223,8 @@
 // console.log(objNumber.toLocaleString("id"));
 
 // Boolean
-const priBoolean = true;
-const objBoolean = new Boolean(false);
+// const priBoolean = true;
+// const objBoolean = new Boolean(false);
 
-console.log(typeof priBoolean);
-console.log(typeof objBoolean);
+// console.log(typeof priBoolean);
+// console.log(typeof objBoolean);
