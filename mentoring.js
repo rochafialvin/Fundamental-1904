@@ -111,39 +111,75 @@
 ////////////////////
 // MAP DUPLICATE //
 ///////////////////
-const numbers = [1, 2, 3];
-const multiple = (number) => {
-  return number * 2;
-};
 
-const mapDuplicate = (arr, cb) => {
-  // arr = [1, 2, 3]
-  // cb = (number) => {
-  //   return number * 2;
-  // };
+/*
+ 1.Method map membutuhkan array untuk di proses, dan callback function yang akan memproses setiap data dari array.
 
-  const newArray = []; // [2, 4, 6]
+  2.Map akan menjalankan callback function sebanyak data yang ada di array, dan setiap kali dijalankan, data pada array akan masuk secara bergantian.
 
-  arr.forEach((element) => {
-    // element = 3
+  3.Callback yang masuk kedalam map akan melakukan return nilai, dan nilai yang di return ini akan dimasukkan ke dalam array baru.
 
-    newArray.push(cb(element));
-  });
+  4.Array baru yang berisi hasil dari proses map akan di return oleh map sehingga hasilnya dapat disimpan ke dalam variabel.
+*/
 
-  return newArray;
-};
+// const numbers = [1, 2, 3];
+// const multiple = (number) => {
+//   return number * 2;
+// };
+
+// const mapDuplicate = (arr, cb) => {
+//   // arr = [1, 2, 3]
+//   // cb = (number) => {
+//   //   return number * 2;
+//   // };
+
+//   const newArray = []; // [2, 4, 6]
+
+//   arr.forEach((element) => {
+//     // element = 3
+
+//     newArray.push(cb(element));
+//   });
+
+//   return newArray;
+// };
 
 // const resultMap = numbers.map(multiple);
-const resultMapDuplicate = mapDuplicate(numbers, multiple);
+// const resultMapDuplicate = mapDuplicate(numbers, multiple);
 
 // console.log("resultMap", resultMap);
-console.log("resultMapDuplicate", resultMapDuplicate);
+// console.log("resultMapDuplicate", resultMapDuplicate);
 
 //////////////////////
 // FILTER DUPLICATE //
 /////////////////////
 
-// const filterDuplicate = (arr, cb) => {
-//   // Isi jawaban teman - teman disini
-//   return [];
+/*
+  1.Method filter membutuhkan array untuk di proses, dan callback function yang akan memproses setiap data dari array.
+
+  2.Filter akan menjalankan callback function sebanyak data yang ada di array, dan setiap kali dijalankan, data pada array akan masuk secara bergantian.
+
+  3.Callback yang masuk kedalam filter akan melakukan return boolean, dan boolean yang di return adalah true, maka data yang sedang di proses akan dimasukkan ke dalam array baru, adapun jika me-return false, datanya tidak dimasukkan ke array baru.
+
+  4.Array baru yang berisi hasil dari proses filter akan di return oleh filter sehingga hasilnya dapat disimpan ke dalam variabel.
+*/
+// const numbers = [1, 2, 3, 4];
+// const genap = (number) => {
+//   return number % 2 == 0;
 // };
+
+// const filterDuplicate = (arr, cb) => {
+//   const arrBaru = [];
+//   // arr = [1, 2, 3]
+//   arr.forEach((value) => {
+//     // result --> true or false
+//     if (cb(value)) {
+//       arrBaru.push(value);
+//     }
+//   });
+
+//   return arrBaru;
+// };
+
+// const resultDuplicate = filterDuplicate(numbers, genap);
+// console.log(resultDuplicate);
