@@ -116,22 +116,71 @@ const captain = {
 // };
 
 /* Syntax */
+// class Player {
+//   constructor(_name, _age, _nationality, _position, _team) {
+//     this.name = _name;
+//     this.age = _age;
+//     this.nationality = _nationality;
+//     this.position = _position;
+//     this.team = _team;
+//   }
+
+//   intro() {
+//     console.log(`Hello, my name is ${this.name}`);
+//   }
+// }
+
+// const dendi = new Player("Danil Ishutin", 30, "Ukraine", "Captain", "B8");
+// const kuroky = new Player("Kuro Salehi", 28, "Geramany", "Captain", "Nigma");
+
+// dendi.intro();
+// kuroky.intro();
+
+// console.log(Player);
+
+/////////////////
+/* INHERITANCE */
+////////////////
+
 class Player {
-  constructor(_name, _age, _nationality, _position, _team) {
-    this.name = _name;
-    this.age = _age;
-    this.nationality = _nationality;
-    this.position = _position;
-    this.team = _team;
+  constructor(name, nickname, nationality) {
+    this.name = name;
+    this.nickname = nickname;
+    this.nationality = nationality;
   }
 
   intro() {
-    console.log(`Hello, my name is ${this.name}`);
+    console.log(`My name is ${this.name} but you can call me ${this.nickname}`);
   }
 }
 
-const dendi = new Player("Danil Ishutin", 30, "Ukraine", "Captain", "B8");
-const kuroky = new Player("Kuro Salehi", 28, "Geramany", "Captain", "Nigma");
+class CasualPlayer extends Player {
+  constructor(name, nickname, nationality, job) {
+    super(name, nickname, nationality);
+    this.job = job;
+  }
 
-dendi.intro();
-kuroky.intro();
+  myJob() {
+    console.log(`I'm not pro player so i have a job, that is ${this.job}`);
+  }
+}
+
+const alvin = new CasualPlayer(
+  "Alvin Rochafi",
+  "rochafi",
+  "Indonesia",
+  "Lecturer"
+);
+
+alvin.intro();
+alvin.myJob();
+
+class ProPlayer {
+  constructor(name, nickname, nationality, team) {
+    this.team = team;
+  }
+
+  myTeam() {
+    console.log(`I'm a pro player so i have a team, that is ${this.team}`);
+  }
+}
