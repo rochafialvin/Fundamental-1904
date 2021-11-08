@@ -52,7 +52,7 @@
       </p>
       <p>
         <label>Warehouse</label>
-        <select>
+        <select id="warehouse">
           <option value="JKT">Jakarta</option>
           <option value="BDG">Bandung</option>
           <option value="DIY">Jogja</option>
@@ -60,17 +60,17 @@
       </p>
       <p>
         <label>Courier</label>
-        <input type="checkbox" name="courier" id="jne" />
+        <input type="checkbox" value="JNE" name="courier" id="jne" />
         <label for="jne">JNE</label>
-        <input type="checkbox" name="courier" id="j&t" />
+        <input type="checkbox" value="J&T" name="courier" id="j&t" />
         <label for="j&t">J&T</label>
-        <input type="checkbox" name="courier" id="ninja" />
+        <input type="checkbox" value="NINJA" name="courier" id="ninja" />
         <label for="ninja">Ninja Express</label>
       </p>
 
       <input type="button" value="Create" onclick="createInfo()" />
     </form>
 
-    <p>Waiting for result ...</p>
+    <p id="result">Waiting for result ...</p>
   </body>
 </html>
