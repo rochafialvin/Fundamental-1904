@@ -22,6 +22,6 @@ const createInfo = () => {
   Price: ${price} <br> Password : ${password} <br> Condition: ${condition} <br> Warehouse: ${warehouse} <br> Courier : ${courierList} <br> Date: ${date}`;
 };
 
-// getElementById : text, email, number, password (id)
+// getElementById : text, email, number, password, select (id)
 // querySelector : radio (name)
 // querySelectorAll : checkbox (name)

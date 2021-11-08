@@ -24,15 +24,36 @@
   <body>
     <h1 style="text-align: center">MARKET V.2.0</h1>
 
-    <table>
-      <thead>
-        <th>Id</th>
-        <th>Category</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Stock</th>
-      </thead>
-      <tbody id="render"></tbody>
-    </table>
+    <form>
+      <fieldset>
+        <legend>Input Data</legend>
+        <table>
+          <tr>
+            <td><input type="text" placeholder="Name" id="nameInput" /></td>
+            <td><input type="number" placeholder="Price" id="priceInput" /></td>
+            <td>
+              <select id="categoryInput"></select>
+            </td>
+            <td>
+              <input type="text" placeholder="Stock" id="stockInput" />
+            </td>
+          </tr>
+        </table>
+        <p><input type="button" value="Input" onclick="fnInputData()" /></p>
+      </fieldset>
+      <fieldset>
+        <legend>Data Table</legend>
+        <table>
+          <thead>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+          </thead>
+          <tbody id="render"></tbody>
+        </table>
+      </fieldset>
+    </form>
   </body>
 </html>
