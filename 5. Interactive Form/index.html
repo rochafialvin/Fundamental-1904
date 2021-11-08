@@ -39,10 +39,17 @@
         <label for="name">Name</label>
         <input type="text" id="name" />
       </p>
+
       <p>
         <label for="price">Price</label>
         <input type="number" id="price" />
       </p>
+
+      <p>
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+      </p>
+
       <p>
         <label>Condition</label>
         <input type="radio" name="condition" value="New" id="new" />
@@ -50,6 +57,7 @@
         <input type="radio" name="condition" value="Second" id="second" />
         <label for="second">Second</label>
       </p>
+
       <p>
         <label>Warehouse</label>
         <select id="warehouse">
@@ -60,12 +68,17 @@
       </p>
       <p>
         <label>Courier</label>
-        <input type="checkbox" value="JNE" name="courier" id="jne" />
+        <input type="checkbox" value="JNE Kurir" name="courier" id="jne" />
         <label for="jne">JNE</label>
-        <input type="checkbox" value="J&T" name="courier" id="j&t" />
+        <input type="checkbox" value="J&T Kurir" name="courier" id="j&t" />
         <label for="j&t">J&T</label>
-        <input type="checkbox" value="NINJA" name="courier" id="ninja" />
+        <input type="checkbox" value="Ninja Kurir" name="courier" id="ninja" />
         <label for="ninja">Ninja Express</label>
+      </p>
+
+      <p>
+        <label>Tanggal</label>
+        <input type="date" id="tanggal" />
       </p>
 
       <input type="button" value="Create" onclick="createInfo()" />
