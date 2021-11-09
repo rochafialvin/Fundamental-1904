@@ -107,6 +107,10 @@ const fnRenderCart = (cart) => {
   document.getElementById("cart").innerHTML = listCart.join("");
 };
 
+/////////////
+/* Payment */
+////////////
+
 /////////////////
 /* Add To Cart */
 ////////////////
