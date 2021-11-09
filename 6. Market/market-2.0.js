@@ -65,6 +65,7 @@ const fnRenderList = (products, isFilter = true) => {
       <td>${product.name}</td>
       <td>${product.price}</td>
       <td>${product.stock}</td>
+      <td><input type="button" value="Delete" onclick="fnDelete(${product.id})" /></td>
     </tr>
     `;
   });
@@ -124,6 +125,14 @@ const fnInputData = () => {
 
   // Render ulang untuk menampilkan list produk terbaru setelah ditambahkan
   fnRenderList(products);
+};
+
+////////////////
+/* Delete Data */
+////////////////
+
+const fnDelete = (selectedId) => {
+  alert(`${selectedId}`);
 };
 
 /////////////////
