@@ -31,6 +31,7 @@
     <!-- filter category menggunakan persamaan string x == z -->
 
     <form>
+      <!-- Input data -->
       <fieldset>
         <legend>Input Data</legend>
         <table>
@@ -47,6 +48,8 @@
         </table>
         <p><input type="button" value="Input" onclick="fnInputData()" /></p>
       </fieldset>
+
+      <!-- Menampilkan data -->
       <fieldset>
         <legend>Data Table</legend>
         <table>
@@ -57,7 +60,9 @@
             <th>Price</th>
             <th>Stock</th>
           </thead>
-          <tbody id="render"></tbody>
+          <tbody id="render">
+            <!-- Akan di isi oleh javascript (fnRenderList) -->
+          </tbody>
         </table>
       </fieldset>
     </form>

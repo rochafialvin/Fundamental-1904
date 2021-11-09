@@ -34,9 +34,60 @@ const products = [
 
 const categories = ["All", "Fast Food", "Electronic", "Cloth", "Fruit"];
 
+/*
+  [
+    `<tr>
+        <td>1579581080923</td>
+        <td>Fast Food</td>
+        <td>Noodle</td>
+        <td>3500</td>
+        <td>9</td>
+    </tr>`,
+    `<tr>
+        <td>1579581081130</td>
+        <td>Electronic</td>
+        <td>Headphone</td>
+        <td>430000</td>
+        <td>8</td>
+     </tr>`,
+    `<tr>
+        <td>1579581081342</td>
+        <td>Cloth</td>
+        <td>Hoodie</td>
+        <td>30000</td>
+        <td>7</td>
+     </tr>`,
+    `<tr>
+        <td>1579581081577</td>
+        <td>Fruit</td>
+        <td>Apple</td>
+        <td>10000</td>
+        <td>8</td>
+     </tr>`
+  ]
+
+*/
 const fnRenderList = (products) => {
   // mapping array of products
   const listProduct = products.map((product) => {
+    // product = {
+    //   id: 1579581081130,
+    //   category: "Electronic",
+    //   name: "Headphone",
+    //   price: 430000,
+    //   stock: 8,
+    // }
+
+    /*
+      <tr>
+        <td>1579581081130</td>
+        <td>Electronic</td>
+        <td>Headphone</td>
+        <td>430000</td>
+        <td>8</td>
+      </tr>
+    
+    */
     return `
     <tr>
       <td>${product.id}</td>
