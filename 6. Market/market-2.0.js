@@ -99,6 +99,7 @@ const fnRenderList = (products) => {
     `;
   });
 
+  // categories = ["All", "Fast Food", "Electronic", "Cloth", "Fruit"];
   // mapping array of categories
   const listCategory = categories.map((category) => {
     return `<option value="${category}">${category}</option>`;
@@ -112,9 +113,9 @@ const fnRenderList = (products) => {
 const fnInputData = () => {
   // Ambil data dari semua element form
   const name = document.getElementById("nameInput").value;
-  const price = document.getElementById("priceInput").value;
+  const price = parseInt(document.getElementById("priceInput").value);
   const category = document.getElementById("categoryInput").value;
-  const stock = document.getElementById("stockInput").value;
+  const stock = parseInt(document.getElementById("stockInput").value);
 
   // Mendapatkan deretan dari method getTime()
   const time = new Date();
@@ -123,6 +124,7 @@ const fnInputData = () => {
   // Menambahkan data baru ke array product
   // products.push({ id: id, name:  name, price: price, category : category, stock : stock });
   products.push({ id, name, price, category, stock });
+  console.log(products);
 
   // Bersihkan form untuk input produk baru
   document.getElementById("nameInput").value = "";

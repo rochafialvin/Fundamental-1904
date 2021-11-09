@@ -39,13 +39,16 @@
             <td><input type="text" placeholder="Name" id="nameInput" /></td>
             <td><input type="number" placeholder="Price" id="priceInput" /></td>
             <td>
-              <select id="categoryInput"></select>
+              <select id="categoryInput">
+                <!-- Akan di isi oleh javascript (fnRenderList) -->
+              </select>
             </td>
             <td>
               <input type="text" placeholder="Stock" id="stockInput" />
             </td>
           </tr>
         </table>
+        <!-- Event -->
         <p><input type="button" value="Input" onclick="fnInputData()" /></p>
       </fieldset>
 
