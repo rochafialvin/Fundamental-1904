@@ -1,7 +1,7 @@
 ///////////////
 /* Init Value*/
 ///////////////
-const products = [
+let products = [
   {
     id: 1579581080923,
     category: "Fast Food",
@@ -37,8 +37,8 @@ const categories = ["All", "Fast Food", "Electronic", "Cloth", "Fruit"];
 /////////////////
 /* Render List */
 ////////////////
-const fnRenderList = (products, isFilter = true) => {
-  // mapping array of products
+const fnRenderList = (products, isFilter = true, selectedId) => {
+  // selectedId = 1579581081130
   const listProduct = products.map((product) => {
     // product = {
     //   id: 1579581081130,
@@ -58,16 +58,32 @@ const fnRenderList = (products, isFilter = true) => {
       </tr>
     
     */
-    return `
-    <tr>
-      <td>${product.id}</td>
-      <td>${product.category}</td>
-      <td>${product.name}</td>
-      <td>${product.price}</td>
-      <td>${product.stock}</td>
-      <td><input type="button" value="Delete" onclick="fnDelete(${product.id})" /></td>
-    </tr>
-    `;
+    //  1579581081130 != 1579581081130
+    if (product.id != selectedId) {
+      return `
+      <tr>
+        <td>${product.id}</td>
+        <td>${product.category}</td>
+        <td>${product.name}</td>
+        <td>${product.price}</td>
+        <td>${product.stock}</td>
+        <td><input type="button" value="Delete" onclick="fnDelete(${product.id})" /></td>
+        <td><input type="button" value="Edit" onclick="fnEdit(${product.id})" /></td>
+      </tr>
+      `;
+    } else {
+      return `
+      <tr>
+        <td>${product.id}</td>
+        <td>${product.category}</td>
+        <td><input type="text" value="${product.name}" /></td>
+        <td><input type="text" value="${product.price}" /></td>
+        <td><input type="text" value="${product.stock}" /></td>
+        <td><input type="button" value="Save" onclick="fnSave()" /></td>
+        <td><input type="button" value="Cancel" onclick="fnCancel()" /></td>
+      </tr>
+      `;
+    }
   });
   // Menaruh list product ke dalam element yang memiliki id 'render'
   document.getElementById("render").innerHTML = listProduct.join("");
@@ -97,6 +113,20 @@ const fnRenderFilter = (products) => {
   });
 
   document.getElementById("render").innerHTML = listProduct.join("");
+};
+
+////////////
+/* Cancel */
+////////////
+const fnCancel = () => {
+  fnRenderList(products, false);
+};
+
+////////////////
+/* Edit Data */
+////////////////
+const fnEdit = (selectedId) => {
+  fnRenderList(products, false, selectedId);
 };
 
 ////////////////
@@ -132,7 +162,14 @@ const fnInputData = () => {
 ////////////////
 
 const fnDelete = (selectedId) => {
-  alert(`${selectedId}`);
+  // selectedId = 1579581081130
+
+  products = products.filter((product) => {
+    // 1579581081130 != 1579581081130 ? false
+    return product.id != selectedId;
+  });
+
+  fnRenderList(products);
 };
 
 /////////////////
