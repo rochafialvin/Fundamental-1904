@@ -1,71 +1,42 @@
-// const numbers = [23, 47, 13, 3, 9, 240];
-// const numbersCopy = numbers;
+// const products = [
+//   {
+//     name: "Pepaya",
+//     price: 2000,
+//   },
+//   {
+//     name: "Nanas",
+//     price: 2200,
+//   },
+//   {
+//     name: "Pisang",
+//     price: 2300,
+//   },
+//   {
+//     name: "Pisang",
+//     price: 2400,
+//   },
+// ];
 
-// const asc = (a, b) => {
-//   return a - b;
-// };
+// const index = products.findIndex((product) => {
+//   return product.name == "Pisang";
+// });
 
-// const dsc = (a, b) => {
-//   return b - a;
-// };
+// console.log(index);
 
-// const result = numbersCopy.sort(asc);
-// console.log(numbers);
-// console.log(result);
+// Spread Operatior
+const car = { color: "green", seats: "4", merk: "Hondu" };
 
-// const fullName = "Draken";
-// const copyName = "Draken";
+const copyCar = { ...car };
+console.log(copyCar); // { color: "green", seats: "4", merk: "Hondu" }
 
-// console.log(fullName === copyName);
+const redCar = { ...car, color: "red" };
+console.log(redCar); // { color: "red", seats: "4", merk: "Hondu" }
 
-// const things = ["pen", "clock"];
-// const copyThings = ["pen", "clock"];
+const suzukaCar = { ...car, merk: "suzuka" };
+console.log(suzukaCar); // { color: "green", seats: "4", merk: "suzuka" }
 
-// console.log(things === copyThings);
+const warrantyCar = { ...car, warranty: "5 years" };
+console.log(warrantyCar); // { color: "green", seats: "4", merk: "Hondu", warranty: "5 years" }
 
-const library = [
-  {
-    title: "Bill Gates",
-    author: "The Road Ahead",
-    readingStatus: true,
-  },
-  {
-    title: "Steve Jobs",
-    author: "Walter Isaacson",
-    readingStatus: true,
-  },
-  {
-    title: "Mockingjay: The Final Book of The Hunger Games",
-    author: "Suzanne Collins",
-    readingStatus: false,
-  },
-];
-
-// Sudah membaca 'Bill Gate' by The Road Ahead
-// Sudah membaca 'Steve Jobs' by Walter Isaacson
-// Kamu masih harus membaca 'Mockingjay: The Final Book of The Hunger Games' by Suzanne Collins
-
-const students = [
-  {
-    name: "John",
-    age: 44,
-  },
-  {
-    name: "John",
-    age: 43,
-  },
-  {
-    name: "Jordy",
-    age: 23,
-  },
-  {
-    name: "Baron",
-    age: 24,
-  },
-];
-
-// ascending
-// [ {}, {}, {}]
-
-// descending
-// [ {}, {}, {}]
+const finalCar = { ...car, color: "black", warranty: "5 years" };
+console.log(finalCar); // { color: "black", seats: "4", merk: "Hondu", warranty: "5 years" }

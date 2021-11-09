@@ -47,18 +47,6 @@ const fnRenderList = (products, isFilter = true, selectedId) => {
     //   price: 430000,
     //   stock: 8,
     // }
-
-    /*
-      <tr>
-        <td>1579581081130</td>
-        <td>Electronic</td>
-        <td>Headphone</td>
-        <td>430000</td>
-        <td>8</td>
-      </tr>
-    
-    */
-    //  1579581081130 != 1579581081130
     if (product.id != selectedId) {
       return `
       <tr>
@@ -76,10 +64,10 @@ const fnRenderList = (products, isFilter = true, selectedId) => {
       <tr>
         <td>${product.id}</td>
         <td>${product.category}</td>
-        <td><input type="text" value="${product.name}" /></td>
-        <td><input type="text" value="${product.price}" /></td>
-        <td><input type="text" value="${product.stock}" /></td>
-        <td><input type="button" value="Save" onclick="fnSave()" /></td>
+        <td><input type="text" value="${product.name}" id="nameEdit" /></td>
+        <td><input type="text" value="${product.price}" id="priceEdit" /></td>
+        <td><input type="text" value="${product.stock}" id="stockEdit" /></td>
+        <td><input type="button" value="Save" onclick="fnSave(${product.id})" /></td>
         <td><input type="button" value="Cancel" onclick="fnCancel()" /></td>
       </tr>
       `;
@@ -94,6 +82,7 @@ const fnRenderList = (products, isFilter = true, selectedId) => {
       return `<option value="${category}">${category}</option>`;
     });
 
+    // Menaruh list category pada tujuannya (reset / replace)
     document.getElementById("categoryInput").innerHTML = listCategory;
     document.getElementById("categoryFilter").innerHTML = listCategory;
   }
@@ -113,6 +102,24 @@ const fnRenderFilter = (products) => {
   });
 
   document.getElementById("render").innerHTML = listProduct.join("");
+};
+
+////////////////
+/* Save Data */
+///////////////
+const fnSave = (selectedId) => {
+  const name = document.getElementById("nameEdit").value;
+  const price = parseInt(document.getElementById("priceEdit").value);
+  const stock = parseInt(document.getElementById("stockEdit").value);
+
+  // foundIndex = 3
+  const foundIndex = products.findIndex((product) => {
+    return product.id == selectedId;
+  });
+
+  products[foundIndex] = { ...products[foundIndex], name, price, stock };
+
+  fnRenderList(products, false);
 };
 
 ////////////
@@ -164,10 +171,12 @@ const fnInputData = () => {
 const fnDelete = (selectedId) => {
   // selectedId = 1579581081130
 
-  products = products.filter((product) => {
-    // 1579581081130 != 1579581081130 ? false
-    return product.id != selectedId;
+  const foundIndex = products.findIndex((product) => {
+    // 1579581081130 == 1579581081130 ? true
+    return product.id == selectedId;
   });
+
+  products.splice(foundIndex, 1);
 
   fnRenderList(products);
 };
