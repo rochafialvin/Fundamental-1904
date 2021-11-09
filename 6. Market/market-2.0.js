@@ -38,6 +38,7 @@ const categories = ["All", "Fast Food", "Electronic", "Cloth", "Fruit"];
 /* Render List */
 ////////////////
 const fnRenderList = (products) => {
+  // products =  undefined
   // mapping array of products
   const listProduct = products.map((product) => {
     // product = {
@@ -126,6 +127,55 @@ const fnFilterName = () => {
   });
 
   fnRenderList(filterResult);
+};
+
+//////////////////
+/* Filter Price */
+/////////////////
+const fnFilterPrice = () => {
+  const min = parseInt(document.getElementById("min").value); // NaN
+  const max = parseInt(document.getElementById("max").value); // NaN
+
+  const filterResult = products.filter((product) => {
+    if (min && max) {
+      return product.price >= min && product.price <= max;
+    } else if (min) {
+      return product.price >= min;
+    } else if (max) {
+      return product.price <= max;
+    } else {
+      return true;
+    }
+  });
+
+  fnRenderList(filterResult);
+};
+
+/////////////////////
+/* Filter Category */
+/////////////////////
+
+const fnFilterCategory = () => {
+  const selectedCategory = document.getElementById("categoryFilter").value;
+
+  // selectedCategory = "Fast Food"
+  let filterResult = products; // undefined
+  if (selectedCategory != "All") {
+    filterResult = products.filter((product) => {
+      return product.category == selectedCategory;
+    });
+  }
+
+  // fnRenderList(products)
+  fnRenderList(filterResult);
+};
+
+//////////////////
+/* Reset Filter */
+//////////////////
+
+const fnResetFilter = () => {
+  fnRenderList(products);
 };
 
 // Render produk saat program pertama kali dijalankan

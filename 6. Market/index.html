@@ -43,15 +43,27 @@
           />
         </p>
         <p>
-          Price : <input type="text" id="min" placeholder="Min" /> -
-          <input type="text" id="max" placeholder="Max" />
+          Price :
+          <input
+            type="text"
+            id="min"
+            placeholder="Min"
+            oninput="fnFilterPrice()"
+          />
+          -
+          <input
+            type="text"
+            id="max"
+            placeholder="Max"
+            oninput="fnFilterPrice()"
+          />
         </p>
         <p>
           Category :
-          <select id="categoryFilter"></select>
+          <select id="categoryFilter" onclick="fnFilterCategory()"></select>
         </p>
         <p>
-          <input type="button" value="Reset" />
+          <input type="button" value="Reset" onclick="fnResetFilter()" />
         </p>
       </fieldset>
 
