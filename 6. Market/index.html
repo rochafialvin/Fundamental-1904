@@ -31,12 +31,43 @@
     <!-- filter category menggunakan persamaan string x == z -->
 
     <form>
+      <fieldset>
+        <legend>Filter</legend>
+        <p>
+          Name :
+          <input
+            type="text"
+            id="nameFilter"
+            placeholder="Name"
+            oninput="fnFilterName()"
+          />
+        </p>
+        <p>
+          Price : <input type="text" id="min" placeholder="Min" /> -
+          <input type="text" id="max" placeholder="Max" />
+        </p>
+        <p>
+          Category :
+          <select id="categoryFilter"></select>
+        </p>
+        <p>
+          <input type="button" value="Reset" />
+        </p>
+      </fieldset>
+
       <!-- Input data -->
       <fieldset>
         <legend>Input Data</legend>
         <table>
           <tr>
-            <td><input type="text" placeholder="Name" id="nameInput" /></td>
+            <td>
+              <input
+                type="text"
+                placeholder="Name"
+                id="nameInput"
+                oninput="fnFilterName()"
+              />
+            </td>
             <td><input type="number" placeholder="Price" id="priceInput" /></td>
             <td>
               <select id="categoryInput">
