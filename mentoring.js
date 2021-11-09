@@ -40,3 +40,8 @@ console.log(warrantyCar); // { color: "green", seats: "4", merk: "Hondu", warran
 
 const finalCar = { ...car, color: "black", warranty: "5 years" };
 console.log(finalCar); // { color: "black", seats: "4", merk: "Hondu", warranty: "5 years" }
+
+let mobil = { color: "green", seats: "4", merk: "Hondu" };
+
+mobil = { ...mobil, merk: "Yamasih" };
+console.log(mobil); // { color: "green", seats: "4", merk: "Yamasih" }
