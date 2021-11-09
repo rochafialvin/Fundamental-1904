@@ -37,8 +37,7 @@ const categories = ["All", "Fast Food", "Electronic", "Cloth", "Fruit"];
 /////////////////
 /* Render List */
 ////////////////
-const fnRenderList = (products) => {
-  // products =  undefined
+const fnRenderList = (products, isFilter = true) => {
   // mapping array of products
   const listProduct = products.map((product) => {
     // product = {
@@ -69,18 +68,34 @@ const fnRenderList = (products) => {
     </tr>
     `;
   });
-
-  // categories = ["All", "Fast Food", "Electronic", "Cloth", "Fruit"];
-  // mapping array of categories
-  const listCategory = categories.map((category) => {
-    return `<option value="${category}">${category}</option>`;
-  });
-
   // Menaruh list product ke dalam element yang memiliki id 'render'
   document.getElementById("render").innerHTML = listProduct.join("");
 
-  document.getElementById("categoryInput").innerHTML = listCategory;
-  document.getElementById("categoryFilter").innerHTML = listCategory;
+  if (!isFilter) {
+    // mapping array of categories
+    const listCategory = categories.map((category) => {
+      return `<option value="${category}">${category}</option>`;
+    });
+
+    document.getElementById("categoryInput").innerHTML = listCategory;
+    document.getElementById("categoryFilter").innerHTML = listCategory;
+  }
+};
+
+const fnRenderFilter = (products) => {
+  const listProduct = products.map((product) => {
+    return `
+    <tr>
+      <td>${product.id}</td>
+      <td>${product.category}</td>
+      <td>${product.name}</td>
+      <td>${product.price}</td>
+      <td>${product.stock}</td>
+    </tr>
+    `;
+  });
+
+  document.getElementById("render").innerHTML = listProduct.join("");
 };
 
 ////////////////
@@ -175,8 +190,8 @@ const fnFilterCategory = () => {
 //////////////////
 
 const fnResetFilter = () => {
-  fnRenderList(products);
+  fnRenderList(products, false);
 };
 
 // Render produk saat program pertama kali dijalankan
-fnRenderList(products);
+fnRenderList(products, false);
