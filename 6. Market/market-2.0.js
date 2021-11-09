@@ -7,7 +7,7 @@ let products = [
     category: "Fast Food",
     name: "Noodle",
     price: 3500,
-    stock: 9,
+    stock: 10,
   },
   {
     id: 1579581081130,
@@ -21,7 +21,7 @@ let products = [
     category: "Cloth",
     name: "Hoodie",
     price: 30000,
-    stock: 7,
+    stock: 8,
   },
   {
     id: 1579581081577,
@@ -31,6 +31,8 @@ let products = [
     stock: 8,
   },
 ];
+
+let cart = [];
 
 const categories = ["All", "Fast Food", "Electronic", "Cloth", "Fruit"];
 
@@ -55,6 +57,7 @@ const fnRenderList = (products, isFilter = true, selectedId) => {
         <td>${product.name}</td>
         <td>${product.price}</td>
         <td>${product.stock}</td>
+        <td><input type="button" value="Add" onclick="fnAddToCart(${product.id})" /></td>
         <td><input type="button" value="Delete" onclick="fnDelete(${product.id})" /></td>
         <td><input type="button" value="Edit" onclick="fnEdit(${product.id})" /></td>
       </tr>
@@ -88,38 +91,74 @@ const fnRenderList = (products, isFilter = true, selectedId) => {
   }
 };
 
-const fnRenderFilter = (products) => {
-  const listProduct = products.map((product) => {
+const fnRenderCart = (cart) => {
+  const listCart = cart.map((val) => {
     return `
     <tr>
-      <td>${product.id}</td>
-      <td>${product.category}</td>
-      <td>${product.name}</td>
-      <td>${product.price}</td>
-      <td>${product.stock}</td>
+      <td>${val.id}</td>
+      <td>${val.category}</td>
+      <td>${val.name}</td>
+      <td>${val.price}</td>
+      <td>${val.qty}</td>
     </tr>
     `;
   });
 
-  document.getElementById("render").innerHTML = listProduct.join("");
+  document.getElementById("cart").innerHTML = listCart.join("");
+};
+
+/////////////////
+/* Add To Cart */
+////////////////
+const fnAddToCart = (selectedId) => {
+  const foundProduct = products.find((product) => {
+    return product.id === selectedId;
+  });
+
+  // foundCart berisi undefined ketika produk yang dicari tidak ketemu
+  const foundCart = cart.find((cart) => {
+    return cart.id == selectedId;
+  });
+
+  if (!foundCart) {
+    const { id, category, name, price } = foundProduct;
+    cart.push({ id, category, name, price, qty: 1 });
+  } else {
+    // val --> object di dalam cart { id, category, name, price, qty }
+    // foundIndex berisi -1 ketika produk yang dicari tidak ketemu
+    const foundIndex = cart.findIndex((val) => {
+      return val.id === selectedId;
+    });
+
+    cart[foundIndex].qty++;
+  }
+
+  fnRenderCart(cart);
 };
 
 ////////////////
 /* Save Data */
 ///////////////
 const fnSave = (selectedId) => {
-  const name = document.getElementById("nameEdit").value;
-  const price = parseInt(document.getElementById("priceEdit").value);
-  const stock = parseInt(document.getElementById("stockEdit").value);
+  const isUpdate = confirm(
+    `Apakah ingin mengupdate data dengan id ${selectedId} ?`
+  );
 
-  // foundIndex = 3
-  const foundIndex = products.findIndex((product) => {
-    return product.id == selectedId;
-  });
+  if (isUpdate) {
+    const name = document.getElementById("nameEdit").value;
+    const price = parseInt(document.getElementById("priceEdit").value);
+    const stock = parseInt(document.getElementById("stockEdit").value);
 
-  products[foundIndex] = { ...products[foundIndex], name, price, stock };
+    // foundIndex = 3
+    const foundIndex = products.findIndex((product) => {
+      return product.id == selectedId;
+    });
 
-  fnRenderList(products, false);
+    // Update data untuk property name, price, dan stock
+    products[foundIndex] = { ...products[foundIndex], name, price, stock };
+
+    fnRenderList(products, false);
+  }
 };
 
 ////////////
@@ -171,14 +210,20 @@ const fnInputData = () => {
 const fnDelete = (selectedId) => {
   // selectedId = 1579581081130
 
-  const foundIndex = products.findIndex((product) => {
-    // 1579581081130 == 1579581081130 ? true
-    return product.id == selectedId;
-  });
+  const isDelete = confirm(
+    `Apakah ingin menghapus data dengan id ${selectedId} ?`
+  );
 
-  products.splice(foundIndex, 1);
+  if (isDelete) {
+    const foundIndex = products.findIndex((product) => {
+      // 1579581081130 == 1579581081130 ? true
+      return product.id == selectedId;
+    });
 
-  fnRenderList(products);
+    products.splice(foundIndex, 1);
+
+    fnRenderList(products);
+  }
 };
 
 /////////////////

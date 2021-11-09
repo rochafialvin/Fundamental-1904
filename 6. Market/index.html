@@ -16,7 +16,7 @@
       }
 
       form {
-        max-width: 80%;
+        width: 80%;
         margin: 0 auto;
       }
     </style>
@@ -105,10 +105,28 @@
             <th>Name</th>
             <th>Price</th>
             <th>Stock</th>
+            <th>Buy</th>
             <th colspan="2">Action</th>
           </thead>
           <tbody id="render">
             <!-- Akan di isi oleh javascript (fnRenderList) -->
+          </tbody>
+        </table>
+      </fieldset>
+
+      <!-- Cart -->
+      <fieldset>
+        <legend>Cart</legend>
+        <table>
+          <thead>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+          </thead>
+          <tbody id="cart">
+            <!-- Akan di isi oleh javascript (fnRenderCart) -->
           </tbody>
         </table>
       </fieldset>
