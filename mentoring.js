@@ -105,55 +105,94 @@
 
 // console.log(number);
 
-const things = [
-  "clock",
-  2,
-  2,
-  [3, 4],
-  [{ one: 1, two: 2 }],
-  { first: { firstOne: 1.1, firstTwo: 1.2 } },
-  () => {
-    console.log("Dipanggil");
-    return [[123], { random: 123 }];
+// const things = [
+//   "clock",
+//   2,
+//   2,
+//   [3, 4],
+//   [{ one: 1, two: 2 }],
+//   { first: { firstOne: 1.1, firstTwo: 1.2 } },
+//   () => {
+//     console.log("Dipanggil");
+//     return [[123], { random: 123 }];
+//   },
+// ];
+
+// things[0]; // clock
+// things[1]; // 2
+// things[2]; // 2
+// things[3]; // [3, 4]
+// things[3][0]; // 3
+// things[3][1]; // 4
+
+// things[4]; // [{ one: 1, two: 2 }]
+// things[4][0]; // { one: 1, two: 2 }
+// things[4][0].one; // 1
+// things[4][0].two; // 2
+
+// things[5]; // { first: { firstOne: 1.1, firstTwo: 1.2 } }
+// things[5].first; // { firstOne: 1.1, firstTwo: 1.2 }
+// things[5].first.firstOne; // 1.1
+// things[5].first.firstTwo; // 1.2
+
+// things[6]; // function
+// things[6](); // Dipanggil
+// const x = things[6](); // x = [[123], { random: 123 }]
+// x[0]; // [ 123 ]
+// x[0][0]; // 123
+// x[1]; // { random : 123 }
+// x[1].random; // 123
+
+// things[6]()[0]; // [ 123 ]
+// things[6]()[1]; // { random: 123 }
+// things[6]()[0][0]; // 123
+// things[6]()[1].random; // 123
+
+// console.log(things[6][0]);
+
+// const add = (a, b) => {
+//   const result = a + b;
+//   return [result];
+// };
+
+// // const z = add(1, 2); // x = [3]
+// console.log(add[0]); // undefined
+
+const something = {
+  number: 123,
+  day: "sunday",
+  pets: ["dogo", "cato"],
+  person: {
+    firstName: "Adam",
+    lastName: "Maulana",
+    pets: ["gator", "snake"],
   },
-];
-
-things[0]; // clock
-things[1]; // 2
-things[2]; // 2
-things[3]; // [3, 4]
-things[3][0]; // 3
-things[3][1]; // 4
-
-things[4]; // [{ one: 1, two: 2 }]
-things[4][0]; // { one: 1, two: 2 }
-things[4][0].one; // 1
-things[4][0].two; // 2
-
-things[5]; // { first: { firstOne: 1.1, firstTwo: 1.2 } }
-things[5].first; // { firstOne: 1.1, firstTwo: 1.2 }
-things[5].first.firstOne; // 1.1
-things[5].first.firstTwo; // 1.2
-
-things[6]; // function
-things[6](); // Dipanggil
-const x = things[6](); // x = [[123], { random: 123 }]
-x[0]; // [ 123 ]
-x[0][0]; // 123
-x[1]; // { random : 123 }
-x[1].random; // 123
-
-things[6]()[0]; // [ 123 ]
-things[6]()[1]; // { random: 123 }
-things[6]()[0][0]; // 123
-things[6]()[1].random; // 123
-
-console.log(things[6][0]);
-
-const add = (a, b) => {
-  const result = a + b;
-  return [result];
+  whatDay: function () {
+    // this == something
+    // something.day
+    console.log(this.day);
+  },
+  personPets: function () {
+    console.log(this.person.pets);
+    return this.pets;
+  },
 };
 
-// const z = add(1, 2); // x = [3]
-console.log(add[0]); // undefined
+something.number; // 123
+something.day; // "sunday"
+something.pets; // ["dogo", "cato"]
+something.pets[0]; // dogo
+something.pets[1]; // cato
+something.person; // { firstName: "Adam", lastName: "Maulana", pets : ["gator", "snake"] }
+something.person.firstName; // Adam
+something.person.lastName; // Maulana
+something.person.pets; // ["gator", "snake"]
+something.person.pets[0]; // gator
+something.person.pets[1]; // snake
+
+something.whatDay();
+console.log(something.personPets());
+// something.personPets() akan me return ["dogo", "cato"]
+something.personPets().forEach((animal) => {
+  console.log(`Animal : ${animal}`);
+});
