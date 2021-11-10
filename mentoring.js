@@ -1,78 +1,159 @@
-// const products = [
-//   {
-//     name: "Pepaya",
-//     price: 2000,
-//   },
-//   {
-//     name: "Nanas",
-//     price: 2200,
-//   },
-//   {
-//     name: "Pisang",
-//     price: 2300,
-//   },
-//   {
-//     name: "Pisang",
-//     price: 2400,
-//   },
-// ];
+// var text;
+// let text2;
+// const text3 = 99;
+// var money = 999;
+// console.log($money);
 
-// const index = products.findIndex((product) => {
-//   return product.name == "Pisang";
-// });
+// // a-z , 0-9, _, $
 
-// console.log(index);
+// // var --> function
+// function test() {
+//   var firstName = "Tommy";
+//   console.log(firstName);
+// }
+// console.log(firstName); // tidak bisa
 
-// Spread Operatior
-// const car = { color: "green", seats: "4", merk: "Hondu" };
+// // let & const --> function, block code (kurung kurawal)
+// function testagain() {
+//   let x = 1;
+//   const y = 2;
+// }
 
-// const copyCar = { ...car };
-// console.log(copyCar); // { color: "green", seats: "4", merk: "Hondu" }
+///////////////
+// CONDITION //
+///////////////
 
-// const redCar = { ...car, color: "red" };
-// console.log(redCar); // { color: "red", seats: "4", merk: "Hondu" }
+// Boolean : true / false
 
-// const suzukaCar = { ...car, merk: "suzuka" };
-// console.log(suzukaCar); // { color: "green", seats: "4", merk: "suzuka" }
+// if (false) {
+//   console.log("Jalan di if");
+// } else if (false) {
+//   console.log("Jalan di else if");
+// } else if (true) {
+//   console.log("Jalan di else if 2");
+// } else {
+//   console.log("Semua if bernilai false, jalan di else");
+// }
 
-// const warrantyCar = { ...car, warranty: "5 years" };
-// console.log(warrantyCar); // { color: "green", seats: "4", merk: "Hondu", warranty: "5 years" }
+// Truthy & Falsy value
+// Falsy : 0, "", undefined, null, NaN
 
-// const finalCar = { ...car, color: "black", warranty: "5 years" };
-// console.log(finalCar); // { color: "black", seats: "4", merk: "Hondu", warranty: "5 years" }
+// if (rain) {
+//   console.log("Jalan gan");
+// }
 
-// let mobil = { color: "green", seats: "4", merk: "Hondu" };
+// switch (false) {
+//   case "abc":
+//     console.log("Case 1 : abc");
+//     break;
 
-// mobil = { ...mobil, merk: "Yamasih" };
-// console.log(mobil); // { color: "green", seats: "4", merk: "Yamasih" }
+//   case "":
+//     console.log("Case 2 : string kosong");
+//     break;
 
-// FIND
+//   case 13:
+//     console.log("Case 3 : 13");
+//     break;
 
-const products = [
-  {
-    id: 1,
-    name: "Pepaya",
-    price: 2000,
-  },
-  {
-    id: 2,
-    name: "Nanas",
-    price: 2200,
-  },
-  {
-    id: 3,
-    name: "Pisang",
-    price: 2300,
-  },
-  {
-    id: 4,
-    name: "Pisang",
-    price: 2400,
+//   case 0:
+//     console.log("Case 4 : 0");
+//     break;
+
+//   case 1 > 9: // false
+//     console.log("Case 5: 1 > 9");
+//     break;
+
+//   case false || true: // false
+//     console.log("Case 6: false || true");
+//     break;
+
+//   default:
+//     console.log("Default");
+// }
+
+// == -> value
+// === -> value & data type
+
+// != -> value
+// !== -> value & data type
+
+// true || ... --> true
+// false && ... --> false
+
+// Perbandingan : < > <= == === ...
+// Logic : && ||
+
+// console.log(true > false);
+
+// kiri diubah menjadi boolean
+// kiri : true, gunakan data yang kanan
+// kiri : false, gunakan data yang kiri
+// console.log(0 && 6);
+
+// kiri diubah menjadi boolean
+// kiri : true, gunakan data yang kiri
+// kiri : false, gunakan data yang kanan
+// console.log(99 || 6);
+
+// let number = 10;
+
+// number--;
+// number--;
+// number - 1;
+// number -= 1;
+// number = number - 1;
+
+// console.log(number);
+
+const things = [
+  "clock",
+  2,
+  2,
+  [3, 4],
+  [{ one: 1, two: 2 }],
+  { first: { firstOne: 1.1, firstTwo: 1.2 } },
+  () => {
+    console.log("Dipanggil");
+    return [[123], { random: 123 }];
   },
 ];
 
-const ketemu = products.find((product) => {
-  // saat return true, maka data yang sedang diproses yang akan menjadi hasil return dari method find
-  return product.name === "Pisang";
-});
-console.log(ketemu);
+things[0]; // clock
+things[1]; // 2
+things[2]; // 2
+things[3]; // [3, 4]
+things[3][0]; // 3
+things[3][1]; // 4
+
+things[4]; // [{ one: 1, two: 2 }]
+things[4][0]; // { one: 1, two: 2 }
+things[4][0].one; // 1
+things[4][0].two; // 2
+
+things[5]; // { first: { firstOne: 1.1, firstTwo: 1.2 } }
+things[5].first; // { firstOne: 1.1, firstTwo: 1.2 }
+things[5].first.firstOne; // 1.1
+things[5].first.firstTwo; // 1.2
+
+things[6]; // function
+things[6](); // Dipanggil
+const x = things[6](); // x = [[123], { random: 123 }]
+x[0]; // [ 123 ]
+x[0][0]; // 123
+x[1]; // { random : 123 }
+x[1].random; // 123
+
+things[6]()[0]; // [ 123 ]
+things[6]()[1]; // { random: 123 }
+things[6]()[0][0]; // 123
+things[6]()[1].random; // 123
+
+console.log(things[6][0]);
+
+const add = (a, b) => {
+  const result = a + b;
+  return [result];
+};
+
+// const z = add(1, 2); // x = [3]
+console.log(add[0]); // undefined
