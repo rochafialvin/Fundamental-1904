@@ -21,3 +21,9 @@
 - git log (Melihat daftar checkpoint dengan informasi lengkap)
 
 - git log --oneline (Melihat daftar checkpoint dengan informasi singkat)
+
+- git revert (commit id) (Membuat commit baru sebagai penanda bahwa ada commit yang di coret)
+
+- git reset (commit id) (Menghapus commit tanpa menghapus code)
+
+- git reset (commit id) --hard (Menghapus commit berikut dengan code)
