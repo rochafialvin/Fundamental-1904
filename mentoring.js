@@ -158,41 +158,99 @@
 // // const z = add(1, 2); // x = [3]
 // console.log(add[0]); // undefined
 
-const something = {
-  number: 123,
-  day: "sunday",
-  pets: ["dogo", "cato"],
-  person: {
-    firstName: "Adam",
-    lastName: "Maulana",
-    pets: ["gator", "snake"],
-  },
-  whatDay: function () {
-    // this == something
-    // something.day
-    console.log(this.day);
-  },
-  personPets: function () {
-    console.log(this.person.pets);
-    return this.pets;
-  },
-};
+// const something = {
+//   number: 123,
+//   day: "sunday",
+//   pets: ["dogo", "cato"],
+//   person: {
+//     firstName: "Adam",
+//     lastName: "Maulana",
+//     pets: ["gator", "snake"],
+//   },
+//   whatDay: function () {
+//     // this == something
+//     // something.day
+//     console.log(this.day);
+//   },
+//   personPets: function () {
+//     console.log(this.person.pets);
+//     return this.pets;
+//   },
+// };
 
-something.number; // 123
-something.day; // "sunday"
-something.pets; // ["dogo", "cato"]
-something.pets[0]; // dogo
-something.pets[1]; // cato
-something.person; // { firstName: "Adam", lastName: "Maulana", pets : ["gator", "snake"] }
-something.person.firstName; // Adam
-something.person.lastName; // Maulana
-something.person.pets; // ["gator", "snake"]
-something.person.pets[0]; // gator
-something.person.pets[1]; // snake
+// something.number; // 123
+// something.day; // "sunday"
+// something.pets; // ["dogo", "cato"]
+// something.pets[0]; // dogo
+// something.pets[1]; // cato
+// something.person; // { firstName: "Adam", lastName: "Maulana", pets : ["gator", "snake"] }
+// something.person.firstName; // Adam
+// something.person.lastName; // Maulana
+// something.person.pets; // ["gator", "snake"]
+// something.person.pets[0]; // gator
+// something.person.pets[1]; // snake
 
-something.whatDay();
-console.log(something.personPets());
-// something.personPets() akan me return ["dogo", "cato"]
-something.personPets().forEach((animal) => {
-  console.log(`Animal : ${animal}`);
-});
+// something.whatDay();
+// console.log(something.personPets());
+// // something.personPets() akan me return ["dogo", "cato"]
+// something.personPets().forEach((animal) => {
+//   console.log(`Animal : ${animal}`);
+// });
+
+// const fnLorem = (a, b) => {
+//   console.log(`Nilai a : ${a}`);
+//   console.log(`Nilai b : ${b}`);
+// };
+
+// const fnIpsum = () => {
+//   console.log("fnIpsum is running, sir");
+//   return 23;
+// };
+
+// fnLorem(fnIpsum, fnIpsum());
+
+// const fnDolor = () => {
+//   return { one: "Day one", two: "Day Two" };
+// };
+
+// fnLorem(fnDolor(), fnDolor().one);
+
+// fnLorem(1, 3);
+// fnLorem([5, 3, 1], { id: 355 });
+
+// const things = ["clock", "pen", "pencil"];
+// const something = { pet: "cato", color: "black" };
+
+// fnLorem(things[1], things[2]);
+// fnLorem(things[0], something.pet);
+
+// Mengecheck apakah suatu nilai itu merupakan NaN (Not a Number)
+// isNaN();
+
+// const x = 2 * {}; // NaN
+// console.log(isNaN(x));
+
+// if (isNaN(x)) {
+//   console.log("x : NaN");
+// } else {
+//   console.log("x : bukan NaN");
+// }
+
+// i = 5
+// for (var i = 1; i < 5; i++) {
+//   i++;
+//   i + 1;
+//   console.log(i);
+// }
+
+// console.log(`Nilai akhir i : ${i}`);
+
+// const hehe = false;
+
+// while (hehe) {
+//   console.log("Masuk gan di While");
+// }
+
+// do {
+//   console.log("Masuk gan di Do While");
+// } while (hehe);
