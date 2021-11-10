@@ -1,3 +1,5 @@
+## GIT ##
+
 - git --version
 
 - git --help
@@ -27,3 +29,17 @@
 - git reset (commit id) (Menghapus commit tanpa menghapus code)
 
 - git reset (commit id) --hard (Menghapus commit berikut dengan code)
+
+## GITHUB ##
+
+- git remote add (variable) (link repo di github) (Menghubungkan project git di local dengan repo di github)
+  git remote add origin https://github.com/rochafialvin/git-1904.git
+
+- git push (variable) (branch)
+  git push origin master
+
+- git clone (link) (Download repo github)
+  git clone https://github.com/rochafialvin/git-1904.git
+
+- git pull (variable) (branch) (Download update code terbaru dari repo)
+  git pull origin master
